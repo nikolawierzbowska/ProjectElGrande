@@ -1,0 +1,106 @@
+.hero-wrapper{
+    position: relative;
+   
+}
+
+.hero-container{
+    background: url('C:\Users\nikol\elgrange\elgrande\public\Gradient.png') center center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.image-container{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    max-height: 100%; 
+}
+
+.image-container>img{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    right:  0;
+    top: 0;
+}
+
+.hero-left{
+    position: absolute; 
+    left: 0;
+    margin-top: 50px;
+}
+
+
+.flexColStart{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    }
+
+
+
+.main-text{
+    z-index: 1;
+    position: relative;
+    color: #000;
+    text-align: center;
+    font-size: 3.3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    width: 703px;
+    margin: 100px 75px 50px 70px;
+    line-height: 190%;
+
+}
+
+.more-info-button {
+    position: relative;
+    z-index: 1;
+    margin: 30px 0px 60px 290px;
+    display: flex;
+    background: transparent;
+    flex-shrink: 0;
+    color: #000;
+    font-weight: bold;
+
+
+  }
+
+  .additional-text{
+    position: relative;
+    z-index: 1;
+    margin: 100px 0 0 40px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  
+  .first-line-text{
+    margin: 50px 0  5px 295px;
+    padding: 20px 0 0 0;
+    color: #000;
+  }
+
+.other-line-text{
+    margin: 20px 0 0 95px;
+    padding: auto;
+    color: #000;
+}
+
+.tick{
+    margin: 2px 5px 0 15px;
+    padding: 0 0 0 2px ;
+    width: 15px;
+    height: 15px;
+}
+
+
