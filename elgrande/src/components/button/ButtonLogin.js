@@ -1,25 +1,16 @@
-import React from 'react';
-import './Button.css';
-import { Link } from 'react-router-dom';
+import React from "react";
+import "./Button.css";
+import { Link } from "react-router-dom";
 
-const STYLES = ['btn--outline'];
+const STYLES = ["btn--outline"];
 
-
-
-export const ButtonLogin = ({
-  children,
-  type,
-  onClick,
-  buttonStyle
-}) => {
+export const ButtonLogin = ({ children, type, onClick, buttonStyle }) => {
   const checkButtonStyle = STYLES.includes(buttonStyle)
     ? buttonStyle
     : STYLES[0];
 
-
-
   return (
-    <Link to='/login' className='btn-mobile'>
+    <Link to="/login" className="btn-mobile">
       <button
         className={`btn ${checkButtonStyle} `}
         onClick={onClick}
@@ -29,5 +20,5 @@ export const ButtonLogin = ({
       </button>
     </Link>
   );
-}
+};
 export default ButtonLogin;

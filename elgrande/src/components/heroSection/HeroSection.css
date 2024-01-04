@@ -1,100 +1,97 @@
 .hero-wrapper{
     position: relative;
-   
+    width:100%;
 }
 
-.hero-container{
-    background: url('C:\Users\nikol\elgrange\elgrande\public\Gradient.png') center center/cover no-repeat;
-    height: 100vh;
+ .hero-container{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-end;
-}
+    align-items: flex-end; 
+    object-fit: contain;
+} 
 
-.image-container{
-    position: relative;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    max-height: 100%; 
-}
-
-.image-container>img{
-    position: absolute;
-    width: 50%;
-    height: 100%;
-    right:  0;
-    top: 0;
+.hero-right> img{
+    position: relative; 
+    height: 27rem; 
+    width:33rem;
+    border: #000 2px solid;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.5);
+    display:flex; 
 }
 
 .hero-left{
-    position: absolute; 
-    left: 0;
-    margin-top: 50px;
+    gap: 2rem;
+    margin-top: 2rem;
+    left: 1rem;
+    max-width: 50%;   
 }
 
+.hero-right{
+    max-width: 50%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-top:1.5em;
+}
+
+.hero-title{
+    position: relative;
+    z-index: 1;
+    top: 1rem;
+}
+
+.hero-title>h1{
+    color: #000;
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 800;
+    line-height: 4rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-top: 1rem;   
+}
 
 .flexColStart{
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: absolute;
-    left: 0;
+    width: 50%;
+    align-items: center;
     }
-
-
-
-.main-text{
-    z-index: 1;
-    position: relative;
-    color: #000;
-    text-align: center;
-    font-size: 3.3rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    width: 703px;
-    margin: 100px 75px 50px 70px;
-    line-height: 190%;
-
-}
 
 .more-info-button {
     position: relative;
     z-index: 1;
-    margin: 30px 0px 60px 290px;
+    margin-top: 1rem;
     display: flex;
     background: transparent;
     flex-shrink: 0;
     color: #000;
     font-weight: bold;
-
-
+    justify-content: center
   }
 
   .additional-text{
     position: relative;
     z-index: 1;
-    margin: 100px 0 0 40px;
-    font-size: 20px;
+    text-align: center;
+    font-size: 1rem;
     font-weight: bold;
   }
 
-  
   .first-line-text{
-    margin: 50px 0  5px 295px;
+    margin-bottom: 0.5rem;
+    margin-top: 2rem;
     padding: 20px 0 0 0;
     color: #000;
   }
 
-.other-line-text{
-    margin: 20px 0 0 95px;
+    .other-line-text{
     padding: auto;
     color: #000;
-}
+    }
 
 .tick{
     margin: 2px 5px 0 15px;
@@ -103,4 +100,190 @@
     height: 15px;
 }
 
+
+@media screen and (min-width: 1500px) {
+    .hero-container{
+       width: 100%;
+       align-items: center;      
+    } 
+
+    .hero-title>h1{
+        color: #d60cbb;
+        text-align: center;
+        font-size: 2.4rem;
+        font-weight: 800;
+        line-height: 4rem;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        margin-top: 1rem;   
+    }
+
+    .hero-right> img{
+        position: relative; 
+        height: 28rem; 
+        width:33rem;
+        border: #000 3px solid;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.5);
+        display:flex; 
+        margin-left: 22rem;
+    }
+
+    .hero-left{
+        align-items: end;
+    }
+
+    .hero-right{
+            align-items: flex-start;
+    }
+
+    .flexColStart{    
+        align-items: stretch;
+        align-content: space-around;
+        flex-wrap: nowrap;
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    .hero-left{
+        margin-top: 1.5rem;
+    }
+
+    .first-line-text{
+        margin-bottom: 0.5rem;
+        margin-top: 1rem;
+        padding: 20px 0 0 0;
+        color: #000;
+      }
+    
+    .hero-title>h1{
+        font-size: 2.2rem;
+        line-height: 3rem;
+        letter-spacing: 3px;
+        margin-top: 0;
+    }
+
+    .additional-text{
+        font-size: 0.9rem;
+        margin-top: 0;
+      }
+
+    .tick{
+        margin: 2px 5px 0 15px;
+        width: 11.5px;
+        height: 11.5px;
+    }
+}
+
+
+@media screen and (max-width: 1100px){
+    .other-line-text{
+        margin-left: -1rem;
+    }
+
+    .hero-right> img{
+        height: 100%; 
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .hero-left{
+        margin-top: 5rem;
+    }
+
+    .hero-right{
+        margin-top: 5rem;
+    }
+
+    .hero-right> img{
+        height: 100%; 
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .hero-left{
+        margin-top: 2.5rem;
+    }
+
+    .hero-right{
+        margin-top: 3rem;
+    }
+    
+    .hero-right> img{
+        height: 100%; 
+        width: 95%;
+    }
+
+    .hero-title>h1{
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .additional-text{
+        font-size: 0.74rem;
+    }
+    }
+
+
+@media screen and (max-width: 700px) {
+    .hero-container{
+        align-items: center;
+        align-content: center;
+    } 
+
+    .flexColStart{
+        position: relative;
+    }
+    
+    .hero-left{
+        gap: 1rem;
+        margin-top: 0;
+        left: 0;
+        max-width: none;   
+    }
+
+    .hero-right{
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-title>h1{
+        font-size: 1.6rem;
+        line-height: 2.5rem;
+        letter-spacing: 2px;
+        margin-top: 0;
+        margin-bottom: 0.8rem;
+    }
+
+    .additional-text{
+        font-size: 0.6rem;
+        margin-top: 1rem;
+      }
+
+    .first-line-text{
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .tick{
+        margin: 2px 2px 0 10px;
+        width: 7px;
+        height: 7px;
+    }
+
+    .hero-right> img{
+        border: #000 0.7px solid;
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .additional-text{
+        font-size: 0.5rem;
+        
+    }
+}
 
