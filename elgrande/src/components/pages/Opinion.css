@@ -1,0 +1,114 @@
+.opinions{
+    padding: 4rem 2rem 0.5rem 2rem;
+}
+
+.title{
+    color:  #4803c9;;
+    font-size: 1.8rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 800;
+    line-height: 3rem;
+    letter-spacing: 4px;
+}
+
+.quote{
+    font-size: 2.5rem;
+    margin: 20px 20px 30px;
+    color: #4803c9;
+}
+
+.nameStudent{
+    height: 20px;
+    justify-content: flex-end;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.name{
+    display: flex;
+    font-weight: bold;
+    margin-bottom:16px;
+    font-size: 1rem;
+    justify-content: center;
+}
+
+.opinionsContainer{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.opinionsWrapper{
+    position: relative;
+    margin: 50px 0 30px;
+}
+
+.opinionContainer{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color:#d33175;
+    margin: 20px 30px 30px 20px;
+    width: 250px;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.opinionItems{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.opinionItem {
+    background: rgba(255, 255, 255, 0.75);
+    display: block;
+    margin:  1rem;
+    border: 2px solid #4803c9;
+    color: black;
+    font-size: 1rem; 
+    line-height: 20px; 
+    width: 100%;
+    height: 300px;
+    padding: 14px;
+    flex-flow: column;
+    text-align: center;
+    position: relative;
+}
+
+@media screen and (max-width: 1300px) {
+    .opinions{
+        padding: 9rem 3rem 1rem 3rem;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .opinions{
+        padding: 7rem 3rem 1rem 3rem;
+    } 
+}
+
+@media screen and (max-width: 700px) {
+    .opinions{
+        padding: 5rem 3rem 1rem 3rem;
+    } 
+}
+
+@media screen and (max-width: 500px) {
+    .opinions{
+        padding: 3rem;
+    } 
+}
+ 
+@media screen and (max-width: 400px) {
+    .opinions{
+        padding: 2rem;
+    }  
+}
+ 

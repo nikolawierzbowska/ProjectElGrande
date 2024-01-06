@@ -3,11 +3,6 @@
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
-
- 
-
- 
-  
 }
 
 body{
@@ -17,13 +12,13 @@ body{
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  
-
 }
 
-/* .home,
-.services,
-.products,
+
+.price,
+.contact,
+.login,
+.more-info,
 .sign-up {
   display: flex;
   height: 90vh;
@@ -32,7 +27,7 @@ body{
   font-size: 3rem;
 }
 
-.services {
+.more-info {
 
   background-position: center;
   background-size: cover;
@@ -41,7 +36,7 @@ body{
   font-size: 100px;
 }
 
-.products {
+.price, .contact {
 
   background-position: center;
   background-size: fill;
@@ -50,11 +45,11 @@ body{
   font-size: 100px;
 }
 
-.sign-up {
+.sign-up, .login {
 
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   color: #fff;
   font-size: 100px;
-} */
+}

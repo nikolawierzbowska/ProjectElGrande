@@ -2,17 +2,28 @@ import React from "react";
 import Navbar from "./components/navbar/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
-import HeroSection from "./components/heroSection/HeroSection";
+import Home from "./components/pages/Home";
+import Opinion from "./components/pages/Opinion";
+import Price from "./components/pages/Price";
+import Contact from "./components/pages/Contact";
+import Login from "./components/pages/Login";
+import SignUp from "./components/pages/SignUp";
+import MoreInfo from "./components/pages/MoreInfo";
 
 function App() {
   return (
     <>
       <Router>
         <Navbar />
-        <HeroSection />
 
         <Routes>
-          <Route path="/" exact />
+          <Route path="/" element={<Home />} />
+          <Route path="/opinion" element={<Opinion />} />
+          <Route path="/price" element={<Price />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/sign-up" element={<SignUp />} />
+          <Route path="/more-info" element={<MoreInfo />} />
         </Routes>
       </Router>
     </>
