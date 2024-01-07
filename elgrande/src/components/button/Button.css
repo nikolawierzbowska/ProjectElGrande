@@ -20,6 +20,29 @@
   margin-right: 15px;
 }
 
+
+.btn--outline--color {
+  background-color: #d33175;
+  color: #000;
+  padding: 8px 10px;
+  border: 2px solid;
+  text-align: center;
+  letter-spacing: 3px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  white-space: nowrap;
+  width: auto;
+  margin-right: 15px;
+}
+
+
+.btn--outline--color:hover{
+  transition: all 0.3s ease-out;
+  font-size: larger;
+  color: #000;
+  transition: 250ms;
+}
+
 .btn--outline:hover {
   transition: all 0.3s ease-out;
   background: #d33175;

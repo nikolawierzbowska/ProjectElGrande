@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ButtonMoreInfo } from "../button/ButtonMoreInfo";
 import "./HeroSection.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
 function HeroSection() {
   return (
@@ -17,7 +19,7 @@ function HeroSection() {
           </div>
           <div className="more-info-button">
             {
-              <ButtonMoreInfo buttonStyle="btn--outline">
+              <ButtonMoreInfo buttonStyle="btn--outline--color">
                 Więcej informacji
               </ButtonMoreInfo>
             }
@@ -28,9 +30,19 @@ function HeroSection() {
               <br />
             </div>
             <div className="other-line-text">
-              <img className="tick" src="tick.jpg" /> każdego dnia
-              <img className="tick" src="tick.jpg" /> o każdej porze
-              <img className="tick" src="tick.jpg" /> w dowolnym miejscu
+              <span className="tick">
+                {" "}
+                <FontAwesomeIcon icon={faCheck} />
+                każdego dnia
+              </span>
+              <span className="tick">
+                {" "}
+                <FontAwesomeIcon icon={faCheck} />o każdej porze
+              </span>
+              <span className="tick">
+                {" "}
+                <FontAwesomeIcon icon={faCheck} />w dowolnym miejscu
+              </span>
             </div>
           </div>
         </div>

@@ -1,4 +1,4 @@
-.opinions{
+.contact{
     padding: 3.5rem 2rem 0.5rem 2rem;
 }
 
@@ -12,8 +12,7 @@
     letter-spacing: 4px;
 }
 
-
-.opinionsContainer{
+.contactContainer{
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -22,19 +21,19 @@
     margin: 0 auto;
 }
 
-.opinionsWrapper{
+.contactWrapper{
     position: relative;
     margin: 50px 0 30px;
 }
 
-.opinionItems{
+.contactItems{
     justify-content: center;
     align-items: center;
     display: flex;
     flex-wrap: wrap;
 }
 
-.opinionContainer{
+.contactItemContainer{
     justify-content: center;
     align-items: center;
     display: flex;
@@ -45,7 +44,7 @@
     flex-direction: column;
 }
 
-.opinionItem {
+.contactItem {
     background: rgba(255, 255, 255, 0.89);
     display: block;
     margin:  1rem;
@@ -67,41 +66,68 @@
     color: #4803c9;
 }
 
-.name{
+.phoneContainer{
     display: flex;
+    margin-top: 40px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.phone{
     font-weight: bold;
-    margin-bottom:16px;
+    margin: 25px 10px;
+    font-size: 1.3rem;
+}
+
+.mailContainer{
+    display: flex;
+    margin-top: 40px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.mail{
+    font-weight: bold;
+    margin: 25px 10px;
     font-size: 1rem;
+}
+
+.socialMedia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
 
 
+
 @media screen and (max-width: 1300px) {
-    .opinions{
+    .contact{
         padding: 8rem 3rem 1rem 3rem;
     }
 }
 
 @media screen and (max-width: 1200px){
-    .opinions{
+    .contact{
         padding: 7rem 3rem 1rem 3rem;
     } 
 }
 
 @media screen and (max-width: 700px) {
-    .opinions{
+    .contact{
         padding: 5rem 3rem 1rem 3rem;
     } 
 }
 
 @media screen and (max-width: 500px) {
-    .opinions{
+    .contact{
         padding: 3rem;
     } 
 }
  
 @media screen and (max-width: 400px) {
-    .opinions{
+    .contact{
         padding: 2rem;
     }  
 }

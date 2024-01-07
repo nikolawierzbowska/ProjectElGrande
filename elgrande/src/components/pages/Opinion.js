@@ -19,9 +19,7 @@ function Opinion() {
                   </p>
                   test test test test test test test test test test
                 </li>
-                <div className="nameStudent">
-                  <div className="name">NAME</div>
-                </div>
+                <div className="name">NAME</div>
               </div>
               <div className="opinionContainer">
                 <li className="opinionItem">
@@ -30,9 +28,7 @@ function Opinion() {
                   </p>
                   test test test test test test test test test test
                 </li>
-                <div className="photoStudent">
-                  <div className="name">NAME</div>
-                </div>
+                <div className="name">NAME</div>
               </div>
               <div className="opinionContainer">
                 <li className="opinionItem">
@@ -41,9 +37,7 @@ function Opinion() {
                   </p>
                   test test test test test test test test test test
                 </li>
-                <div className="photoStudent">
-                  <div className="name">NAME</div>
-                </div>
+                <div className="name">NAME</div>
               </div>
               <div className="opinionContainer">
                 <li className="opinionItem">
@@ -52,9 +46,7 @@ function Opinion() {
                   </p>
                   test test test test test test test test test test
                 </li>
-                <div className="photoStudent">
-                  <div className="name">NAME</div>
-                </div>
+                <div className="name">NAME</div>
               </div>
               <div className="opinionContainer">
                 <li className="opinionItem">
@@ -63,9 +55,7 @@ function Opinion() {
                   </p>
                   test test test test test test test test test test
                 </li>
-                <div className="photoStudent">
-                  <div className="name">NAME</div>
-                </div>
+                <div className="name">NAME</div>
               </div>
               <div className="opinionContainer">
                 <li className="opinionItem">
@@ -74,9 +64,7 @@ function Opinion() {
                   </p>
                   test test test test test test test test test test
                 </li>
-                <div className="photoStudent">
-                  <div className="name">NAME</div>
-                </div>
+                <div className="name">NAME</div>
               </div>
               <div className="opinionContainer">
                 <li className="opinionItem">
@@ -85,9 +73,7 @@ function Opinion() {
                   </p>
                   test test test test test test test test test test
                 </li>
-                <div className="photoStudent">
-                  <div className="name">NAME</div>
-                </div>
+                <div className="name">NAME</div>
               </div>
             </ul>
           </div>

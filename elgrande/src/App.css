@@ -16,7 +16,6 @@ body{
 
 
 .price,
-.contact,
 .login,
 .more-info,
 .sign-up {
@@ -36,7 +35,7 @@ body{
   font-size: 100px;
 }
 
-.price, .contact {
+.price{
 
   background-position: center;
   background-size: fill;

@@ -2,7 +2,7 @@ import React from "react";
 import "./Button.css";
 import { Link } from "react-router-dom";
 
-const STYLES = ["btn--outline"];
+const STYLES = ["btn--outline--color"];
 
 export const ButtonMoreInfo = ({ children, type, onClick, buttonStyle }) => {
   const checkButtonStyle = STYLES.includes(buttonStyle)
