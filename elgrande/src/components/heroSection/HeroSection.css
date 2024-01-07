@@ -65,6 +65,11 @@
     width: 15px;
     height: 15px;
 }
+
+.svg-inline--fa.fa-check{
+margin-right: 8px;
+font-size: 1.1rem;
+}
     
 .hero-right{
     justify-content: center;

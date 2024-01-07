@@ -1,4 +1,4 @@
-.contact{
+.price{
     padding: 3.5rem 2rem 0.5rem 2rem;
 }
 
@@ -12,7 +12,8 @@
     letter-spacing: 4px;
 }
 
-.contactContainer{
+
+.pricesContainer{
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -21,19 +22,19 @@
     margin: 0 auto;
 }
 
-.contactWrapper{
+.priceWrapper{
     position: relative;
     margin: 50px 0 30px;
 }
 
-.contactItems{
+.priceItems{
     justify-content: center;
     align-items: center;
     display: flex;
     flex-wrap: wrap;
 }
 
-.contactItemContainer{
+.priceContainer{
     justify-content: center;
     align-items: center;
     display: flex;
@@ -45,7 +46,7 @@
     border-radius: 2px ;
 }
 
-.contactItem {
+.priceItem {
     background: rgba(255, 255, 255, 0.89);
     display: block;
     margin:  1rem;
@@ -68,69 +69,61 @@
     color: #4803c9;
 }
 
-.phoneContainer{
-    display: flex;
-    margin-top: 40px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
 
-.phone{
-    font-weight: bold;
-    margin: 25px 10px;
-    font-size: 1.3rem;
+.money{
+    font-size: 2.5rem;
+    margin: 50px 20px 30px;
+    font-weight: 700;
+    
 }
-
-.mailContainer{
-    display: flex;
-    margin-top: 40px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.mail{
-    font-weight: bold;
-    margin: 25px 10px;
+.info {
     font-size: 1rem;
+    margin-top: 60px;
+
 }
 
-.socialMedia{
+.infoDate{
+    font-size: 1.7rem;
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+
+.buttonContainer{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    font-weight: bold;
+    margin-bottom:16px;
+    font-size: 1rem;
     justify-content: center;
 }
-
 
 
 @media screen and (max-width: 1300px) {
-    .contact{
+    .price{
         padding: 8rem 3rem 1rem 3rem;
     }
 }
 
 @media screen and (max-width: 1200px){
-    .contact{
+    .price{
         padding: 7rem 3rem 1rem 3rem;
     } 
 }
 
 @media screen and (max-width: 700px) {
-    .contact{
+    .price{
         padding: 5rem 3rem 1rem 3rem;
     } 
 }
 
 @media screen and (max-width: 500px) {
-    .contact{
+    .price{
         padding: 3rem;
     } 
 }
  
 @media screen and (max-width: 400px) {
-    .contact{
+    .opinions{
         padding: 2rem;
     }  
 }
- 

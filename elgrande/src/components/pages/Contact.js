@@ -12,7 +12,7 @@ function Contact() {
   return (
     <>
       <div className="contact">
-        <h1 className="title">KONTAKT</h1>
+        <h1 className="title">Jesteśmy do Twojej Dyspozycji</h1>
         <div className="contactContainer">
           <div className="contactWrapper">
             <ul className="contactItems">

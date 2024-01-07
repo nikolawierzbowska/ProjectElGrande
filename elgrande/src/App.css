@@ -14,8 +14,6 @@ body{
   background-attachment: fixed;
 }
 
-
-.price,
 .login,
 .more-info,
 .sign-up {
@@ -35,14 +33,7 @@ body{
   font-size: 100px;
 }
 
-.price{
 
-  background-position: center;
-  background-size: fill;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
-}
 
 .sign-up, .login {
 

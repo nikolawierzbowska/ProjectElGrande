@@ -2,21 +2,17 @@ import React from "react";
 import "./Button.css";
 import { Link } from "react-router-dom";
 
-const STYLES = ["btn--outline--color"];
+const STYLES = ["btn--outline"];
+const NAME = ["Więcej informacji"];
 
-export const ButtonMoreInfo = ({ children, type, onClick, buttonStyle }) => {
-  const checkButtonStyle = STYLES.includes(buttonStyle)
-    ? buttonStyle
-    : STYLES[0];
+export const ButtonMoreInfo = ({ children, onClick, buttonStyle }) => {
+  const checkButtonStyle = buttonStyle || STYLES[0];
+  const buttonName = children || NAME[0];
 
   return (
-    <Link to="/more-info" className="btn-mobile">
-      <button
-        className={`btn ${checkButtonStyle} `}
-        onClick={onClick}
-        type={type}
-      >
-        {children}
+    <Link to="/more-info">
+      <button className={`btn ${checkButtonStyle} `} onClick={onClick}>
+        {buttonName}
       </button>
     </Link>
   );

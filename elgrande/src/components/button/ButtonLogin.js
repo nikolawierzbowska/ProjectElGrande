@@ -3,20 +3,16 @@ import "./Button.css";
 import { Link } from "react-router-dom";
 
 const STYLES = ["btn--outline"];
+const NAME = ["ZALOGUJ"];
 
-export const ButtonLogin = ({ children, type, onClick, buttonStyle }) => {
-  const checkButtonStyle = STYLES.includes(buttonStyle)
-    ? buttonStyle
-    : STYLES[0];
+export const ButtonLogin = ({ children, onClick, buttonStyle }) => {
+  const checkButtonStyle = buttonStyle || STYLES[0];
+  const buttonName = children || NAME[0];
 
   return (
-    <Link to="/login" className="btn-mobile">
-      <button
-        className={`btn ${checkButtonStyle} `}
-        onClick={onClick}
-        type={type}
-      >
-        {children}
+    <Link to="/login">
+      <button className={`btn ${checkButtonStyle} `} onClick={onClick}>
+        {buttonName}
       </button>
     </Link>
   );

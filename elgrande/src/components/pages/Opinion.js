@@ -8,7 +8,7 @@ function Opinion() {
   return (
     <>
       <div className="opinions">
-        <h1 className="title">Opinie naszych uczniów</h1>
+        <h1 className="title">Dowiedz się, Co Myślą Nasi Uczniowie o Kursie</h1>
         <div className="opinionsContainer">
           <div className="opinionsWrapper">
             <ul className="opinionItems">

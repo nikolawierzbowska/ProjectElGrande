@@ -18,11 +18,7 @@ function HeroSection() {
             </h1>
           </div>
           <div className="more-info-button">
-            {
-              <ButtonMoreInfo buttonStyle="btn--outline--color">
-                Więcej informacji
-              </ButtonMoreInfo>
-            }
+            {<ButtonMoreInfo buttonStyle="btn--outline--color" />}
           </div>
           <div className="additional-text">
             <div className="first-line-text">

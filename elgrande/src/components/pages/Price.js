@@ -1,10 +1,67 @@
 import React from "react";
 import "../../App.css";
+import "./Price.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCreditCard } from "@fortawesome/free-solid-svg-icons";
+import { ButtonSignUp } from "../button/ButtonSignUp";
 
 function Price() {
   return (
     <>
-      <h1 className="price">PRICE</h1>
+      <div className="price">
+        <h1 className="title">Znajdź Plan, Który Pasuje Do Ciebie!</h1>
+        <div className="pricesContainer">
+          <div className="priceWrapper">
+            <ul className="priceItems">
+              <div className="priceContainer">
+                <li className="priceItem">
+                  <p className="quote">
+                    <FontAwesomeIcon icon={faCreditCard} />
+                  </p>
+                  <p className="money">200zł</p>
+                  <p className="info">Dostęp do platformy:</p>
+                  <p className="infoDate">3 miesiące</p>
+                </li>
+                <div className="buttonContainer">
+                  <ButtonSignUp buttonStyle="btn--outline--buy">
+                    WYBIERZ
+                  </ButtonSignUp>
+                </div>
+              </div>
+              <div className="priceContainer">
+                <li className="priceItem">
+                  <p className="quote">
+                    <FontAwesomeIcon icon={faCreditCard} />
+                  </p>
+                  <p className="money">300zł</p>
+                  <p className="info">Dostęp do platformy:</p>
+                  <p className="infoDate">6 miesięcy</p>
+                </li>
+                <div className="buttonContainer">
+                  <ButtonSignUp buttonStyle="btn--outline--buy">
+                    WYBIERZ
+                  </ButtonSignUp>
+                </div>
+              </div>
+              <div className="priceContainer">
+                <li className="priceItem">
+                  <p className="quote">
+                    <FontAwesomeIcon icon={faCreditCard} />
+                  </p>
+                  <p className="money">400zł</p>
+                  <p className="info">Dostęp do platformy:</p>
+                  <p className="infoDate">12 miesięcy</p>
+                </li>
+                <div className="buttonContainer">
+                  <ButtonSignUp buttonStyle="btn--outline--buy">
+                    WYBIERZ
+                  </ButtonSignUp>
+                </div>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
