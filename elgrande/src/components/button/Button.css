@@ -16,6 +16,7 @@
   white-space: nowrap;
   width: auto;
   margin-right: 15px;
+  border-radius: 10px;
 }
 
 .btn--outline:hover {
@@ -31,26 +32,40 @@
   font-weight: bold;
   white-space: nowrap;
   width: auto;
+  border-radius: 10px;
 }
 
 .btn--outline--color:hover{
   transition: all 0.3s ease-out;
   transition: 250ms;
-  background-color: #4803c9;
+  background-color: #7169D4;
 }
 
 .btn--outline--buy {
-  background-color: #4803c9;
+  background-color: #7169D4;
   color: rgba(255, 255, 255, 0.89);
   letter-spacing: 3px;
   white-space: nowrap;
   width: auto;
   font-weight: bold;
+  border-radius: 10px;
 }
 
-.btn--outline--buy:hover {
+
+.btn--outline--accept {
+  background-color: #7169D4;
+  color: rgba(255, 255, 255, 0.89);
+  letter-spacing: 3px;
+  white-space: nowrap;
+  width: auto;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+
+.btn--outline--buy:hover, .btn--outline--accept:hover {
   background: #d33175;
-  border-color: #4803c9;
+  border-color: #7169D4;
 }
 
 

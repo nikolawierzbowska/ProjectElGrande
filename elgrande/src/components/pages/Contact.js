@@ -18,7 +18,7 @@ function Contact() {
             <ul className="contactItems">
               <div className="contactItemContainer">
                 <li className="contactItem">
-                  <p className="quote">
+                  <p className="icon">
                     <FontAwesomeIcon icon={faPhoneVolume} />
                   </p>
                   <div className="phoneContainer">
@@ -29,7 +29,7 @@ function Contact() {
               </div>
               <div className="contactItemContainer">
                 <li className="contactItem">
-                  <p className="quote">
+                  <p className="icon">
                     <FontAwesomeIcon icon={faEnvelope} />
                   </p>
                   <div className="mailContainer">
@@ -41,13 +41,13 @@ function Contact() {
               <div className="contactItemContainer">
                 <li className="contactItem">
                   <div className="socialMedia">
-                    <p className="quote">
+                    <p className="icon">
                       <FontAwesomeIcon icon={faInstagram} />
                     </p>
-                    <p className="quote">
+                    <p className="icon">
                       <FontAwesomeIcon icon={faSquareFacebook} />
                     </p>
-                    <p className="quote">
+                    <p className="icon">
                       <FontAwesomeIcon icon={faTiktok} />
                     </p>
                   </div>

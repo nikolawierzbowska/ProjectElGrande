@@ -44,7 +44,7 @@ function HeroSection() {
         </div>
         <div className="hero-right">
           <img
-            src="photoMainPage.jpg"
+            src="mainImage.png"
             alt="girl is siting at the desk and studying"
           />
         </div>

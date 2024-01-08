@@ -15,7 +15,7 @@ function Price() {
             <ul className="priceItems">
               <div className="priceContainer">
                 <li className="priceItem">
-                  <p className="quote">
+                  <p className="cardImg">
                     <FontAwesomeIcon icon={faCreditCard} />
                   </p>
                   <p className="money">200zł</p>
@@ -30,7 +30,7 @@ function Price() {
               </div>
               <div className="priceContainer">
                 <li className="priceItem">
-                  <p className="quote">
+                  <p className="cardImg">
                     <FontAwesomeIcon icon={faCreditCard} />
                   </p>
                   <p className="money">300zł</p>
@@ -45,7 +45,7 @@ function Price() {
               </div>
               <div className="priceContainer">
                 <li className="priceItem">
-                  <p className="quote">
+                  <p className="cardImg">
                     <FontAwesomeIcon icon={faCreditCard} />
                   </p>
                   <p className="money">400zł</p>
