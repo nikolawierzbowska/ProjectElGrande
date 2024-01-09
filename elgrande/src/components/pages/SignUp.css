@@ -144,9 +144,10 @@ p.iconRegister{
     width:100%;
 }
 
-.buttonContainer{
+.buttonContainerSignUp{
     display: flex;
     font-weight: bold;
+    margin-top:16px;
     margin-bottom:16px;
     font-size: 1rem;
     justify-content: center;

@@ -21,12 +21,12 @@ function Price() {
                   <p className="money">200zł</p>
                   <p className="info">Dostęp do platformy:</p>
                   <p className="infoDate">3 miesiące</p>
+                  <div className="buttonContainerPrice">
+                    <ButtonSignUp buttonStyle="btn--outline--buy">
+                      WYBIERZ
+                    </ButtonSignUp>
+                  </div>
                 </li>
-                <div className="buttonContainer">
-                  <ButtonSignUp buttonStyle="btn--outline--buy">
-                    WYBIERZ
-                  </ButtonSignUp>
-                </div>
               </div>
               <div className="priceContainer">
                 <li className="priceItem">
@@ -36,12 +36,12 @@ function Price() {
                   <p className="money">300zł</p>
                   <p className="info">Dostęp do platformy:</p>
                   <p className="infoDate">6 miesięcy</p>
+                  <div className="buttonContainerPrice">
+                    <ButtonSignUp buttonStyle="btn--outline--buy">
+                      WYBIERZ
+                    </ButtonSignUp>
+                  </div>
                 </li>
-                <div className="buttonContainer">
-                  <ButtonSignUp buttonStyle="btn--outline--buy">
-                    WYBIERZ
-                  </ButtonSignUp>
-                </div>
               </div>
               <div className="priceContainer">
                 <li className="priceItem">
@@ -51,12 +51,12 @@ function Price() {
                   <p className="money">400zł</p>
                   <p className="info">Dostęp do platformy:</p>
                   <p className="infoDate">12 miesięcy</p>
+                  <div className="buttonContainerPrice">
+                    <ButtonSignUp buttonStyle="btn--outline--buy">
+                      WYBIERZ
+                    </ButtonSignUp>
+                  </div>
                 </li>
-                <div className="buttonContainer">
-                  <ButtonSignUp buttonStyle="btn--outline--buy">
-                    WYBIERZ
-                  </ButtonSignUp>
-                </div>
               </div>
               <div className="priceContainerImage">
                 <div className="imgContainerPrice">

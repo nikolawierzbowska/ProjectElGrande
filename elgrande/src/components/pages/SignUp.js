@@ -84,11 +84,11 @@ function SignUp() {
                         <FontAwesomeIcon icon={faLock} />
                       </p>
                     </p>
+                    <div className="buttonContainerSignUp">
+                      <ButtonAccept buttonStyle="btn--outline--accept" />
+                    </div>
                   </div>
                 </li>
-                <div className="buttonContainer">
-                  <ButtonAccept buttonStyle="btn--outline--accept" />
-                </div>
               </div>
               <div className="signUpContainerRegister2">
                 <h1 className="title">Zapisz się na kurs!</h1>

@@ -1,20 +1,19 @@
 .btn {
-  padding: 8px 10px;
+  padding: 5px 10px;
   border-radius: 2px;
   outline: none; 
   cursor: pointer;
-  color: #000;
   text-align: center;
-  letter-spacing: 3px;
+  letter-spacing: px;
+
 }
 
 .btn--outline {
   background-color: transparent;
-  border: 2px solid;
   font-size: 1.1rem;
   font-weight: bold;
   white-space: nowrap;
-  width: auto;
+  width: 150px;
   margin-right: 15px;
   border-radius: 10px;
 }
@@ -26,13 +25,16 @@
 }
 
 .btn--outline--color {
-  background-color: #e77a99;
-  border: 2px solid;
+  height: 44px;
+  letter-spacing: 1px;
+  background-color: rgb(231, 122, 153);
   font-size: 1.1rem;
   font-weight: bold;
   white-space: nowrap;
   width: auto;
   border-radius: 10px;
+  border: 0.5px solid rgba(255, 255, 255, 0.18); 
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.7);
 }
 
 .btn--outline--color:hover{
@@ -41,25 +43,21 @@
   background-color: #7169D4;
 }
 
-.btn--outline--buy {
-  background-color: #7169D4;
-  color: rgba(255, 255, 255, 0.89);
-  letter-spacing: 3px;
-  white-space: nowrap;
-  width: auto;
-  font-weight: bold;
-  border-radius: 10px;
-}
 
-
-.btn--outline--accept {
+.btn--outline--accept, .btn--outline--buy {
+  width: 220px;
+  height: 32px;
+  text-align: center;
+  font-size: 0.8rem;
+  border: 0.5px solid rgba(255, 255, 255, 0.18); 
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.7);
+  border-radius: 10px ;
   background-color: #7169D4;
-  color: rgba(255, 255, 255, 0.89);
-  letter-spacing: 3px;
-  white-space: nowrap;
-  width: auto;
+  color: white;
   font-weight: bold;
-  border-radius: 10px;
+  padding:none;
+  letter-spacing: 1px;
+  white-space: nowrap;
 }
 
 

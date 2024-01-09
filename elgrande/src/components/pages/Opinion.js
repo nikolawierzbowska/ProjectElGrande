@@ -26,8 +26,8 @@ function Opinion() {
                   </p>
                   test test test test test test test test test testest test test
                   test test testtest test testtest test test
+                  <div className="name">NAME</div>
                 </li>
-                <div className="name">NAME</div>
               </div>
               <div className="opinionContainer">
                 <li className="opinionItem">
@@ -35,8 +35,8 @@ function Opinion() {
                     <FontAwesomeIcon icon={faQuoteLeft} />
                   </p>
                   test test test test test test test test test test
+                  <div className="name">NAME</div>
                 </li>
-                <div className="name">NAME</div>
               </div>
               <div className="opinionContainer">
                 <li className="opinionItem">
@@ -44,8 +44,8 @@ function Opinion() {
                     <FontAwesomeIcon icon={faQuoteLeft} />
                   </p>
                   test test test test test test test test test test
+                  <div className="name">NAME</div>
                 </li>
-                <div className="name">NAME</div>
               </div>
               <div className="opinionContainer">
                 <li className="opinionItem">
@@ -53,8 +53,8 @@ function Opinion() {
                     <FontAwesomeIcon icon={faQuoteLeft} />
                   </p>
                   test test test test test test test test test test
+                  <div className="name">NAME</div>
                 </li>
-                <div className="name">NAME</div>
               </div>
               <div className="opinionContainer">
                 <li className="opinionItem">
@@ -62,8 +62,8 @@ function Opinion() {
                     <FontAwesomeIcon icon={faQuoteLeft} />
                   </p>
                   test test test test test test test test test test
+                  <div className="name">NAME</div>
                 </li>
-                <div className="name">NAME</div>
               </div>
               <div className="opinionContainer">
                 <li className="opinionItem">
@@ -71,17 +71,8 @@ function Opinion() {
                     <FontAwesomeIcon icon={faQuoteLeft} />
                   </p>
                   test test test test test test test test test test
+                  <div className="name">NAME</div>
                 </li>
-                <div className="name">NAME</div>
-              </div>
-              <div className="opinionContainer">
-                <li className="opinionItem">
-                  <p className="quote">
-                    <FontAwesomeIcon icon={faQuoteLeft} />
-                  </p>
-                  test test test test test test test test test test
-                </li>
-                <div className="name">NAME</div>
               </div>
             </ul>
           </div>

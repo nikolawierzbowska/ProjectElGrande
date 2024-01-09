@@ -92,6 +92,7 @@
     font-size: 0.8rem;
     border-color: #4803c9;
     border-radius: 10px ;
+    letter-spacing: none;
 }
 
 p.forgetPssord{
@@ -102,11 +103,11 @@ p.forgetPssord{
     color:  #4803c9;
 }
 
-p.forgetPssord:hover{
+p.forgetPssord, p.iconRegisterEye, p.signUpLink, p.signUpLink:hover{
 cursor: pointer;
 }
 
-.iconLogin{
+.iconLogin, .iconRegisterEye{
     color:  #4803c9;
     display: flex;
 }
@@ -117,6 +118,31 @@ p.iconLogin{
     margin-top: -21px;
     font-size: 12px;
 }
+
+p.iconRegisterEye{
+    display: flex;
+    margin-left: 195px;
+    margin-top: -12px;
+    font-size: 12px;
+
+}
+
+.signUptext{
+    color: black;
+    display: flex;
+    font-size: 12px;
+    font-weight: bold;
+    justify-content: center;
+    margin: -5px 12px 4px  0;
+}
+
+.signUpLink{
+    color: #4803c9;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
     
 .loginContainerLogin2{
     justify-content: center;
@@ -156,7 +182,7 @@ p.iconLogin{
     width:100%;
 }
 
-.buttonContainer{
+.buttonContainerLogin{
     display: flex;
     font-weight: bold;
     margin-bottom:16px;
