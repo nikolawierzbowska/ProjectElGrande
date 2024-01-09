@@ -12,12 +12,11 @@
     letter-spacing: 4px;
 }
 
-
 .pricesContainer{
     display: flex;
     flex-flow: column;
     align-items: center;
-    max-width: 1400px;
+    max-width: 1700px;
     width: 100%;
     margin: 0 auto;
 }
@@ -34,12 +33,31 @@
     flex-wrap: wrap;
 }
 
+.priceContainerImage{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 0 30px 30px 20px;
+    width: 250px;
+    align-items: stretch;
+    flex-direction: column;
+    border-radius: 20px;
+}
+
+.imgContainer{
+    display: flex;
+}
+    
+.imgContainerPrice> img {
+    width: 150%;
+}
+
 .priceContainer{
     justify-content: center;
     align-items: center;
     display: flex;
     background-color:#d33175;
-    margin: 20px 30px 30px 20px;
+    margin: 0 30px 30px 20px;
     width: 250px;
     align-items: stretch;
     flex-direction: column;
@@ -55,7 +73,6 @@
     font-size: 1rem; 
     line-height: 20px; 
     width: 100%;
-    height: 300px;
     padding: 14px;
     flex-flow: column;
     text-align: center;
@@ -69,25 +86,22 @@
     color: #4803c9;
 }
 
-
 .money{
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     margin: 50px 20px 30px;
-    font-weight: 700;
-    
+    font-weight: 700; 
 }
-.info {
-    font-size: 1rem;
-    margin-top: 60px;
 
+.info {
+    font-size: 0.8rem;
+    margin-top: 50px;
 }
 
 .infoDate{
-    font-size: 1.7rem;
-    margin-top: 20px;
+    font-size: 1.4rem;
+    margin-top: 15px;
     font-weight: 700;
 }
-
 
 .buttonContainer{
     display: flex;
@@ -96,7 +110,6 @@
     font-size: 1rem;
     justify-content: center;
 }
-
 
 @media screen and (max-width: 1300px) {
     .price{

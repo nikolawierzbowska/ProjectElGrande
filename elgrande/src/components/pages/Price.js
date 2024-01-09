@@ -58,6 +58,14 @@ function Price() {
                   </ButtonSignUp>
                 </div>
               </div>
+              <div className="priceContainerImage">
+                <div className="imgContainerPrice">
+                  <img
+                    src="./picture/money1.png"
+                    alt="student is paying for course"
+                  />
+                </div>
+              </div>
             </ul>
           </div>
         </div>

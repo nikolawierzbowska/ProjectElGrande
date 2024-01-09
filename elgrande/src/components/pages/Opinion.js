@@ -12,12 +12,18 @@ function Opinion() {
         <div className="opinionsContainer">
           <div className="opinionsWrapper">
             <ul className="opinionItems">
+              <div className="contactContainerImage">
+                <div className="imgContainerOpinion">
+                  <img src="./picture/money.png" alt="opinion photo" />
+                </div>
+              </div>
               <div className="opinionContainer">
                 <li className="opinionItem">
                   <p className="quote">
                     <FontAwesomeIcon icon={faQuoteLeft} />
                   </p>
-                  test test test test test test test test test test
+                  test test test test test test test test test testest test test
+                  test test testtest test testtest test test
                 </li>
                 <div className="name">NAME</div>
               </div>

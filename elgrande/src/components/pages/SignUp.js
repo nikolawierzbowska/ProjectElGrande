@@ -94,8 +94,8 @@ function SignUp() {
                 <h1 className="title">Zapisz się na kurs!</h1>
                 <li className="signUpItemRegister2">
                   <img
-                    src="register.png"
-                    alt="girl is siting at the desk and studying"
+                    src="./picture/register.png"
+                    alt="register to web app photo"
                   />
                 </li>
               </div>
