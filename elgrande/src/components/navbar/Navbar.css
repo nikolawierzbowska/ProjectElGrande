@@ -164,7 +164,7 @@
     }
   
     .nav-links:hover {
-      background-color: #d33175;
+      background-color: #e77a99;
       border-radius: 0;
       border: none;
     }
@@ -214,7 +214,7 @@
     }
   
     .nav-links-mobile:hover {
-      background: #d33175;
+      background: #e77a99;
       color: #4803c9;
       transition: 250ms;
     }

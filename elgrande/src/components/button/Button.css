@@ -21,12 +21,12 @@
 
 .btn--outline:hover {
   transition: all 0.3s ease-out;
-  background: #d33175;
+  background: #e77a99;
   transition: 250ms;
 }
 
 .btn--outline--color {
-  background-color: #d33175;
+  background-color: #e77a99;
   border: 2px solid;
   font-size: 1.1rem;
   font-weight: bold;
@@ -64,7 +64,7 @@
 
 
 .btn--outline--buy:hover, .btn--outline--accept:hover {
-  background: #d33175;
+  background: #e77a99;
   border-color: #7169D4;
 }
 

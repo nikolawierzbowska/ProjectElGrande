@@ -1,0 +1,227 @@
+.login{
+    padding: 1.5rem;
+}
+
+.titleLogin{
+    color:  #4803c9;;
+    font-size: 2.3rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.loginContainer{
+    display: flex;
+    flex-flow: column;
+    align-items: stretch;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    background:  linear-gradient(90deg,rgba(255, 255, 255, 0.1), rgba(255,255,255,0.6));
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(1px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+}
+
+.loginWrapper{
+    position: relative;
+    margin: 30px 0 30px;
+}
+
+.loginItems{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.loginItemContainer{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color:#d33175;
+    margin: 0 0 0 40px;
+    width: 250px;
+    align-items: stretch;
+    flex-direction: column;
+    border-radius: 20px ;
+}
+
+.loginItem {
+    background: rgba(255, 255, 255, 0.89);
+    display: flex;
+    margin:  1rem;
+    border: 2px solid;
+    border-color: #4803c9;
+    color: black;
+    font-size: 1rem; 
+    width: 100%;
+    padding: 7px 10px;
+    flex-flow: column;
+    text-align: center;
+    position: relative;
+    border-radius: 20px ;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerFormlogin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+    
+.personalDataLogin{
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    margin: 30px 10px;
+}
+
+.personalDataLogin > input{
+    width: 220px;
+    height: 30px;
+    text-align: center;
+    font-size: 0.8rem;
+    border-color: #4803c9;
+    border-radius: 10px ;
+}
+
+p.forgetPssord{
+    font-size: 10px;
+    font-weight: bold;
+    text-align: right;
+    margin: -9px 12px 15px  0;
+    color:  #4803c9;
+}
+
+p.forgetPssord:hover{
+cursor: pointer;
+}
+
+.iconLogin{
+    color:  #4803c9;
+    display: flex;
+}
+
+p.iconLogin{
+    display: flex;
+    margin-left: 8px;
+    margin-top: -21px;
+    font-size: 12px;
+}
+    
+.loginContainerLogin2{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color:transparent;
+    margin-left: 20px;
+    width: 350px;
+    align-items: stretch;
+    flex-direction: column;
+    border-radius: 2px ;
+    height: 400px;
+}
+
+.loginItemLogin2> img{
+    width: 100%;
+}
+
+.loginItemLogin2{
+    background: transparent;
+    display: flex;
+    color: black;
+    font-size: 1rem; 
+    line-height: 20px; 
+    width: 100%;
+    height: 400px;
+    flex-flow: column;
+    text-align: center;
+    position: relative;
+    border-radius: 2px ;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center
+}
+
+.loginItemLogin >img{
+    width:100%;
+}
+
+.buttonContainer{
+    display: flex;
+    font-weight: bold;
+    margin-bottom:16px;
+    font-size: 1rem;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1300px) {
+    .login{
+        padding: 8rem 3rem 1rem 3rem;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .login{
+        padding: 7rem 3rem 1rem 3rem;
+    } 
+
+    
+}
+
+@media screen and (max-width: 800px) {
+    .login{
+        padding: 5rem 3rem 1rem 3rem;
+    } 
+
+    .loginContainer{
+        margin:0;    
+    }
+    .loginItemContainer{
+        margin-left: 20px;
+    }
+   
+}
+
+@media screen and (max-width: 700px) {
+    .login{
+        padding: 5rem 3rem 1rem 3rem;
+    } 
+
+    .loginContainer{
+        margin:0;    
+    }
+
+    .loginContainerLogin2{
+        margin-top: 0;
+        margin-left:0;
+        }
+
+        .loginItemContainer{
+            margin-left: 40px;
+        }
+}
+
+@media screen and (max-width: 500px) {
+    .login{
+        padding: 3rem;
+    } 
+    .loginContainer{
+        width: 350px;
+    }
+}
+ 
+@media screen and (max-width: 400px) {
+    .login{
+        padding: 2rem;
+    }  
+}

@@ -9,7 +9,7 @@ function Price() {
   return (
     <>
       <div className="price">
-        <h1 className="title">Znajdź Plan, Który Pasuje Do Ciebie!</h1>
+        <h1 className="titlePrice">Znajdź Plan, Który Pasuje Do Ciebie!</h1>
         <div className="pricesContainer">
           <div className="priceWrapper">
             <ul className="priceItems">

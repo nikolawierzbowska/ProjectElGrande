@@ -2,7 +2,7 @@
     padding: 2.5rem 2rem 0.5rem 2rem;
 }
 
-.title{
+.titlePrice{
     color:  #4803c9;;
     font-size: 1.8rem;
     text-align: center;
@@ -16,7 +16,7 @@
     display: flex;
     flex-flow: column;
     align-items: center;
-    max-width: 1700px;
+    max-width: 1200px;
     width: 100%;
     margin: 0 auto;
 }
@@ -49,7 +49,7 @@
 }
     
 .imgContainerPrice> img {
-    width: 150%;
+    width: 120%;
 }
 
 .priceContainer{
@@ -87,18 +87,18 @@
 }
 
 .money{
-    font-size: 2.2rem;
-    margin: 50px 20px 30px;
+    font-size: 2rem;
+    margin: 30px 20px 30px;
     font-weight: 700; 
 }
 
 .info {
     font-size: 0.8rem;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .infoDate{
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     margin-top: 15px;
     font-weight: 700;
 }

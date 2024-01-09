@@ -14,9 +14,9 @@ body{
   background-attachment: fixed;
 }
 
-.login,
-.more-info,
-.sign-up {
+
+.more-info
+{
   display: flex;
   height: 90vh;
   align-items: center;
@@ -33,13 +33,3 @@ body{
   font-size: 100px;
 }
 
-
-
-.sign-up, .login {
-
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
-}

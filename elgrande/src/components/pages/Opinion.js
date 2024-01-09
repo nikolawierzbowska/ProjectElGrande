@@ -8,13 +8,15 @@ function Opinion() {
   return (
     <>
       <div className="opinions">
-        <h1 className="title">Dowiedz się, Co Myślą Nasi Uczniowie o Kursie</h1>
+        <h1 className="titleOpinion">
+          Dowiedz się, Co Myślą Nasi Uczniowie o Kursie
+        </h1>
         <div className="opinionsContainer">
           <div className="opinionsWrapper">
             <ul className="opinionItems">
               <div className="contactContainerImage">
                 <div className="imgContainerOpinion">
-                  <img src="./picture/money.png" alt="opinion photo" />
+                  <img src="./picture/comment.png" alt="opinion photo" />
                 </div>
               </div>
               <div className="opinionContainer">
