@@ -9,6 +9,7 @@ import Contact from "./components/pages/Contact";
 import Login from "./components/pages/Login";
 import SignUp from "./components/pages/SignUp";
 import MoreInfo from "./components/pages/MoreInfo";
+import Course from "./components/pages/Course";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/more-info" element={<MoreInfo />} />
+          <Route path="/how-to-sign-up" element={<Course />} />
         </Routes>
       </Router>
     </>

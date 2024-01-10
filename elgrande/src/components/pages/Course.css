@@ -1,0 +1,113 @@
+.course{
+    padding: 2.5rem 2rem 0.5rem 2rem;
+}
+
+.titleCourse{
+    color:  #4803c9;
+    font-size: 1.8rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 800;
+    line-height: 3rem;
+    letter-spacing: 4px;
+}
+
+.courseContainer{
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.courseWrapper{
+    position: relative;
+    margin: 40px 0 30px;
+}
+
+.courseItems{
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.courseItemContainerImage{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    margin-left: 40px;
+}
+
+.imgContainerCourse{
+    display: flex;
+}
+    
+.imgContainerCourse img {
+    width: 150px;
+}
+
+.courseItemContainerText{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 0 30px 0 20px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+
+
+.courseItemText {
+    display: flex;
+    margin:  2.4rem 0 0 0;
+    color: black;
+    font-size: 1rem; 
+    line-height: 30px; 
+    width: 100%;
+    padding: 0 14px  ;
+    flex-flow: column;
+    text-align: center;
+    position: relative;
+}
+
+
+
+
+@media screen and (max-width: 1300px) {
+    .course{
+        padding: 8rem 3rem 1rem 3rem;
+    }
+
+@media screen and (max-width: 1200px){
+    .course{
+        padding: 7rem 3rem 1rem 3rem;
+    }
+    
+}
+
+@media screen and (max-width: 1000px) {
+    .course{
+        padding: 5rem 3rem 1rem 3rem;
+    } 
+   
+}
+}
+
+@media screen and (max-width: 500px) {
+    .course{
+        padding: 3rem;
+    } 
+
+    
+}
+ 
+@media screen and (max-width: 400px) {
+    .course{
+        padding: 2rem;
+    }  
+}
+ 

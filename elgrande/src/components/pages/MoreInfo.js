@@ -19,8 +19,7 @@ function MoreInfo() {
                       Składa sie z 30 lekcji. Na początku każdej lekcji jest
                       wprowadzenie teoretyczne, następnie omawianie wraz z
                       rozwiązaniem zadań oraz zadania do samodzielnego
-                      rozwiązania. Każde zadanie posiada rozwiązanie wraz z
-                      komentarzem.
+                      rozwiązania. Każde zadanie posiada rozwiązanie.
                     </p>
                   </div>
                 </li>

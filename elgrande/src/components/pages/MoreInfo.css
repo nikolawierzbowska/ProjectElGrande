@@ -1,10 +1,10 @@
 .moreInfo{
     padding: 2.5rem 2rem 0.5rem 2rem;
-    justify-content: center;
+
 }
 
 .titleInfo{
-    color:  #4803c9;;
+    color:  #4803c9;
     font-size: 1.8rem;
     text-align: center;
     text-transform: uppercase;
@@ -48,7 +48,7 @@
     display: flex;
     flex-direction: column;
     margin-top: 0;
-    margin-left: 80px;
+    margin-left: 40px;
 }
 
 .imgContainerInfo{
@@ -56,7 +56,7 @@
 }
     
 .imgContainerInfo> img {
-    width: 250px;
+    width: 290px;
 }
 
 .moreInfoItemContainer{
@@ -64,7 +64,7 @@
     align-items: center;
     display: flex;
     background-color:#d33175;
-    margin: 15px 0 0 40px;
+    margin: 15px 0 0 25px;
     align-items: stretch;
     flex-direction: column;
     border-radius: 20px;
@@ -82,7 +82,6 @@
     width: 100%;
     padding: 8px 8px 10px 8px;
     flex-flow: column;
-    text-align: center;
     position: relative;
     border-radius: 20px;
 }
@@ -135,6 +134,7 @@
 
 .taskContainer{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .task{
@@ -155,7 +155,7 @@
     }
     
     .moreInfoItemContainerImage{
-        margin-left: 50px;
+        margin-left: 22px;
     }
 
     .moreInfoItemContainer{
@@ -180,6 +180,8 @@
     .moreInfo{
         padding: 3rem;
     } 
+
+    
 }
  
 @media screen and (max-width: 400px) {

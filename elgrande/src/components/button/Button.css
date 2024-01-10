@@ -61,7 +61,7 @@
 }
 
 
-.btn--outline--buy:hover, .btn--outline--accept, .btn--outline--save:hover {
+.btn--outline--buy:hover, .btn--outline--accept:hover, .btn--outline--save:hover {
   background: #e77a99;
   border-color: #7169D4;
 }
