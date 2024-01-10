@@ -2,6 +2,7 @@ import React from "react";
 import "../../App.css";
 import "./Login.css";
 import { ButtonLogin } from "../button/ButtonLogin";
+import { ButtonSignUp } from "../button/ButtonSignUp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faEyeSlash } from "@fortawesome/free-solid-svg-icons";
@@ -55,7 +56,11 @@ function Login() {
                         <ButtonLogin buttonStyle="btn--outline--accept" />
                       </div>
                       <p className="signUptext">Nie masz konta?</p>
-                      <p className="signUpLink">Zapisz się</p>
+                      <p className="signUpLink">
+                        <ButtonSignUp buttonStyle="signUpLink">
+                          Zapisz się
+                        </ButtonSignUp>
+                      </p>
                     </div>
                   </li>
                 </div>

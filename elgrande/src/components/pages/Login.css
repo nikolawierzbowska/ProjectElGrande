@@ -4,7 +4,7 @@
 
 .titleLogin{
     color:  #4803c9;;
-    font-size: 2.3rem;
+    font-size: 2.1rem;
     text-align: center;
     text-transform: uppercase;
     font-weight: 800;
@@ -48,7 +48,8 @@
     width: 250px;
     align-items: stretch;
     flex-direction: column;
-    border-radius: 20px ;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.7);
 }
 
 .loginItem {
@@ -103,7 +104,7 @@ p.forgetPssord{
     color:  #4803c9;
 }
 
-p.forgetPssord, p.iconRegisterEye, p.signUpLink, p.signUpLink:hover{
+p.forgetPssord, p.iconRegisterEye, button.btn.signUpLink:hover{
 cursor: pointer;
 }
 
@@ -141,6 +142,8 @@ p.iconRegisterEye{
     font-size: 12px;
     font-weight: bold;
     margin-bottom: 5px;
+    border:none;
+    padding: 0;
 }
 
     

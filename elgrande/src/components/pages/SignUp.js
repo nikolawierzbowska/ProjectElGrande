@@ -91,7 +91,7 @@ function SignUp() {
                 </li>
               </div>
               <div className="signUpContainerRegister2">
-                <h1 className="title">Zapisz się na kurs!</h1>
+                <h1 className="titleSignUp">Zapisz się na kurs!</h1>
                 <li className="signUpItemRegister2">
                   <img
                     src="./picture/register.png"

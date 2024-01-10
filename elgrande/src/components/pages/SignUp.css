@@ -2,7 +2,7 @@
     padding: 1.5rem;
 }
 
-.title{
+.titleSignUp{
     color:  #4803c9;;
     font-size: 2.1rem;
     text-align: center;
@@ -47,7 +47,8 @@
     width: 250px;
     align-items: stretch;
     flex-direction: column;
-    border-radius: 20px ;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.7);
 }
 
 .signUpItem {

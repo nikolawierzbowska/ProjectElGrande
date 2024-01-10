@@ -62,6 +62,7 @@
     align-items: stretch;
     flex-direction: column;
     border-radius: 20px ;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.7);
 }
 
 .opinionItem {
@@ -89,12 +90,13 @@
 }
 
 .name{
-    display: flex;
+    /* display: flex; */
     font-weight: bold;
     margin-top:30px;
     font-size: 1rem;
-    justify-content: center;
-    bottom: 0;
+    position: absolute;
+    bottom: 10px;
+    left: 97px;
 }
 
 @media screen and (max-width: 1300px) {

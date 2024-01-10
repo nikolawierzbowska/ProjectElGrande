@@ -79,6 +79,7 @@ function Navbar() {
             </li>
           </ul>
           {button && <ButtonLogin />}
+
           {button && <ButtonSignUp />}
         </div>
       </nav>

@@ -13,23 +13,3 @@ body{
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-
-
-.more-info
-{
-  display: flex;
-  height: 90vh;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
-}
-
-.more-info {
-
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
-}
-
