@@ -40,31 +40,48 @@ function MoreInfo() {
 
                     <div className="taskContainer">
                       <div className="task">
-                        Liczby i Potęgi
-                        <br /> Logarytmy
-                        <br /> Procenty
-                        <br /> Równania
-                        <br /> Nierówności
+                        <p className="taskName">Liczby i Potęgi</p>
+
+                        <p className="taskName">Logarytmy</p>
+
+                        <p className="taskName">Procenty</p>
+
+                        <p className="taskName">Równania</p>
+
+                        <p className="taskName">Nierówności</p>
                       </div>
                       <div className="task">
-                        Funkcja liniowa
-                        <br /> Funkcja kwadratowa
-                        <br /> Funkcja wymierna
-                        <br />
-                        Funkcja wykładnicza
-                        <br /> Funkcja logarytmiczna
+                        <p className="taskName">Funkcja liniowa</p>
+
+                        <p className="taskName">Funkcja kwadratowa</p>
+
+                        <p className="taskName">Funkcja wymierna</p>
+
+                        <p className="taskName">Funkcja wykładnicza</p>
+
+                        <p className="taskName">Funkcja logarytmiczna</p>
                       </div>
                       <div className="task">
-                        Wyrażenia algebraiczne
-                        <br /> Wielomiany <br />
-                        Ciągi
-                        <br /> Trygonometria <br />
-                        Geometria anlityczna
+                        <p className="taskName">Wyrażenia algebraiczne</p>
+
+                        <p className="taskName">Wielomiany</p>
+
+                        <p className="taskName">Ciągi</p>
+
+                        <p className="taskName">Trygonometria</p>
+
+                        <p className="taskName">Geometria anlityczna</p>
                       </div>
                       <div className="task">
-                        Planimetria <br /> Stereometria <br /> Statystyka <br />{" "}
-                        Prawdopodobieństwo <br />
-                        Arkusze maturalne
+                        <p className="taskName">Planimetria</p>
+
+                        <p className="taskName">Stereometria</p>
+
+                        <p className="taskName">Statystyka </p>
+
+                        <p className="taskName">Prawdopodobieństwo</p>
+
+                        <p className="taskName">Arkusze maturalne</p>
                       </div>
                     </div>
                     <ButtonSave buttonStyle="btn--outline--save" />

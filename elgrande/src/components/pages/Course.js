@@ -12,25 +12,43 @@ function Course() {
             <ul className="courseItems">
               <div className="courseItemContainerImage">
                 <div className="imgContainerCourse">
-                  <img src="./picture/register1.png" alt="register photo" />
+                  <img
+                    src="./picture/register1.png"
+                    className="photoFirst"
+                    alt="register photo"
+                  />
                 </div>
                 <div className="courseItemContainerText">
-                  Kliknij zapisz się
-                  <br /> i wypełnij formularz
+                  <p className="textToTheImage">
+                    Kliknij zapisz się
+                    <br /> i wypełnij formularz
+                  </p>
+                  <p className="numbers">1</p>
                 </div>
               </div>
               <div className="courseItemContainerImage">
                 <div className="imgContainerCourse">
-                  <img src="./picture/cash.png" alt="payment photo" />
+                  <img
+                    src="./picture/cash.png"
+                    className="photoSecond"
+                    alt="payment photo"
+                  />
                 </div>
-                <div className="courseItemContainerText">Opłać kurs</div>
+                <div className="courseItemContainerText">
+                  <p className="textToTheImage">Opłać kurs</p>
+
+                  <p className="numbers">2</p>
+                </div>
               </div>
               <div className="courseItemContainerImage">
                 <div className="imgContainerCourse">
                   <img src="./picture/mail.png" alt="mail photo" />
                 </div>
                 <div className="courseItemContainerText">
-                  Otrzymasz mail <br />z potwierdzeniem
+                  <p className="textToTheImage">
+                    Otrzymasz mail <br />z potwierdzeniem
+                  </p>
+                  <p className="numbers">3</p>
                 </div>
               </div>
               <div className="courseItemContainerImage">
@@ -38,15 +56,21 @@ function Course() {
                   <img src="./picture/login1.png" alt="login photo" />
                 </div>
                 <div className="courseItemContainerText">
-                  Zaloguj się <br />
-                  do platformy
+                  <p className="textToTheImage">
+                    Zaloguj się <br />
+                    do platformy
+                  </p>
+                  <p className="numbers">4</p>
                 </div>
               </div>
               <div className="courseItemContainerImage">
                 <div className="imgContainerCourse">
                   <img src="./picture/goal.png" alt="gain goal photo" />
                 </div>
-                <div className="courseItemContainerText">Zdobywaj wiedzę!</div>
+                <div className="courseItemContainerText">
+                  <p className="textToTheImage">Zdobywaj wiedzę!</p>
+                  <p className="numbers">5</p>
+                </div>
               </div>
             </ul>
           </div>

@@ -38,13 +38,13 @@
   
   .nav-menu {
     display: grid;
-    grid-template-columns: repeat(5, auto);
+    grid-template-columns: repeat(6, auto);
     grid-gap: 10px;
     list-style: none;
     text-align: center;
     width: 65vw;
     justify-content: end;
-    margin-right: 1rem;
+ 
   }
   
   .nav-links {
@@ -52,7 +52,7 @@
     display: flex;
     align-items: center;
     text-decoration: none;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.5rem 0.5rem 0.2rem;
     height: 100%;
   }
   
@@ -97,6 +97,7 @@
   @media screen and (max-width: 1200px) {
     .navbar {
       height: 4.35rem;
+     
     }
     .navbar-logo {
       width: 88px;   
@@ -114,19 +115,36 @@
   }
 
 
-  @media screen and (max-width: 800px) {
-    
+
+  @media screen and (max-width: 1000px) {
     .navbar {
-      height: 3.28em;
+      height: 3.6rem;
+     
+    }
+    .navbar-logo {
+      width: 73px;   
+      cursor: pointer;
+      display: flex;
+      top: 0.16rem;
+      left: 0.68rem; 
+      position: absolute;
+    }
+  }
+
+
+  @media screen and (max-width: 800px) {
+    .navbar {
+      height: 3.1rem;
       position: fixed;
     }
+
     .fa-bars { 
       font-size: 1.28rem;; 
       margin-top: 1.8px;
       margin-right: -0.3px;
       display: flex;
-      
     }
+
     .nav-menu {
       display: flex;
       flex-direction: column;
@@ -138,29 +156,25 @@
       opacity: 1;
       transition: all 0.5s ease;
       overflow: hidden;
-      
-    
+      top: 52px;
     }
+
     .nav-menu.active {
       background: #4f4f4f;
       left: 0;
       opacity: 1;
       transition: all 0.5s ease;
-      z-index: 1;   
-      
-      
-      
+      z-index: 1;     
+      display: flow-root;
     }
   
     .nav-links {
       text-align: center;
-      padding: 10px ;
+      padding: 9px ;
       width: 100%;
       display: table;
       color: #fff;
       font-size: 1.3rem;
-      
-     
     }
   
     .nav-links:hover {
@@ -170,15 +184,14 @@
     }
   
     .navbar-logo {
-        width: 73.5px;   
+        width: 63px;   
         cursor: pointer;
         display: flex;
-        top: 0.17rem;
-        left: 0.65rem; 
+        top: 0.12rem;
+        left: 0.56rem; 
         position: absolute;
       }
-    
-  
+
     .menu-icon {
       display: block;
       position: absolute;
@@ -242,7 +255,7 @@
 
     .nav-links {
       text-align: center;
-      padding: 10px ;
+      padding: 9px ;
       font-size: 1.2rem;     
     }
 
@@ -250,9 +263,9 @@
       display: block;
       text-align: center;
       margin: 0.5rem auto;
-      border-radius: 4px;
+      border-radius: 20px;
       font-size: 1.3rem;
-      padding: 6px 30px;
+      padding: 5px 30px;
       border: 0.7px solid #fff;
       width: 50%;
     }
@@ -289,7 +302,7 @@
   
     .nav-links-mobile {
       margin: 0.35rem auto;
-      border-radius: 4px;
+      border-radius: 20px;
       font-size: 1rem;
       padding: 4px 30px;
       border: 0.5px solid #fff;
@@ -333,7 +346,7 @@
   
     .nav-links-mobile {
       margin: 0.25rem auto;
-      border-radius: 4px;
+      border-radius: 20px;
       font-size: 0.89rem;
       padding: 4.2px 30px;
       border: 0.5px solid #fff;
@@ -377,7 +390,7 @@
    
     .nav-links-mobile {
       margin: 0.2rem auto;
-      border-radius: 4px;
+      border-radius: 20px;
       font-size: 0.7rem;
       padding: 3px 30px;
       border: 0.3px solid #fff;
@@ -386,7 +399,7 @@
 
     .nav-links {
       font-size: 0.7rem;
-      padding: 2.2px;
+      padding: 2.5px;
     }
 
     .fa-bars { 
@@ -425,8 +438,8 @@
     }
 
     .nav-links-mobile {
-      margin: 0.2rem auto;
-      border-radius: 4px;
+      margin: 0.3rem auto;
+      border-radius: 20px;
       font-size: 0.48rem;
       padding: 2px 30px;
       border: 0.2px solid #fff;
