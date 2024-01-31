@@ -26,7 +26,7 @@ function MoreInfo() {
               </div>
               <div className="moreInfoItemContainerImage">
                 <div className="imgContainerInfo">
-                  <img src="./picture/info.png" alt="contact photo" />
+                  <img src="./picture/info.png" alt="contact" />
                 </div>
               </div>
               <div className="moreInfoItemContainer">

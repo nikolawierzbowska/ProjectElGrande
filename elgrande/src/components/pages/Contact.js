@@ -18,43 +18,46 @@ function Contact() {
             <ul className="contactItems">
               <div className="contactItemContainerImage">
                 <div className="imgContainer">
-                  <img src="./picture/contact.png" alt="contact photo" />
+                  <img
+                    src="./picture/contact.png"
+                    alt="contact to the office"
+                  />
                 </div>
               </div>
               <div className="contactItemContainer">
                 <li className="contactItem">
-                  <p className="icon">
+                  <div className="icon">
                     <FontAwesomeIcon icon={faPhoneVolume} />
-                  </p>
+                  </div>
                   <div className="phoneContainer">
-                    <p className="phone">621 259 357</p>
-                    <p className="phone">633 888 317</p>
+                    <div className="phone">621 259 357</div>
+                    <div className="phone">633 888 317</div>
                   </div>
                 </li>
               </div>
               <div className="contactItemContainer">
                 <li className="contactItem">
-                  <p className="icon">
+                  <div className="icon">
                     <FontAwesomeIcon icon={faEnvelope} />
-                  </p>
+                  </div>
                   <div className="mailContainer">
-                    <p className="mail">matma5.0kurs@gmail.com</p>
-                    <p className="mail">matma5.0kurs@onet.pl</p>
+                    <div className="mail">matma5.0kurs@gmail.com</div>
+                    <div className="mail">matma5.0kurs@onet.pl</div>
                   </div>
                 </li>
               </div>
               <div className="contactItemContainer">
                 <li className="contactItem">
                   <div className="socialMedia">
-                    <p className="icon">
+                    <div className="icon">
                       <FontAwesomeIcon icon={faInstagram} />
-                    </p>
-                    <p className="icon">
+                    </div>
+                    <div className="icon">
                       <FontAwesomeIcon icon={faSquareFacebook} />
-                    </p>
-                    <p className="icon">
+                    </div>
+                    <div className="icon">
                       <FontAwesomeIcon icon={faTiktok} />
-                    </p>
+                    </div>
                   </div>
                 </li>
               </div>

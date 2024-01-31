@@ -11,7 +11,11 @@ export const ButtonAccept = ({ children, onClick, buttonStyle }) => {
 
   return (
     <Link to="#">
-      <button className={`btn ${checkButtonStyle} `} onClick={onClick}>
+      <button
+        type="submit"
+        className={`btn ${checkButtonStyle} `}
+        onClick={onClick}
+      >
         {buttonName}
       </button>
     </Link>

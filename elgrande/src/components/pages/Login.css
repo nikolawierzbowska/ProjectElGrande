@@ -96,7 +96,7 @@
     letter-spacing: none;
 }
 
-p.forgetPssord{
+div.forgetPssord{
     font-size: 10px;
     font-weight: bold;
     text-align: right;
@@ -104,7 +104,7 @@ p.forgetPssord{
     color:  #4803c9;
 }
 
-p.forgetPssord, p.iconRegisterEye, button.btn.signUpLink:hover{
+div.forgetPssord, div.iconRegisterEye, button.btn.signUpLink:hover{
 cursor: pointer;
 }
 
@@ -113,17 +113,20 @@ cursor: pointer;
     display: flex;
 }
 
-p.iconLogin{
+div.iconLogin{
     display: flex;
-    margin-left: 8px;
-    margin-top: -21px;
+    position: relative;
+    margin-left: 10px;
+    margin-top: -23px;
     font-size: 12px;
 }
 
-p.iconRegisterEye{
+div.iconRegisterEye{
     display: flex;
+    position: relative;
+    margin-top: -15px;
     margin-left: 195px;
-    margin-top: -12px;
+  
     font-size: 12px;
 
 }
@@ -131,7 +134,7 @@ p.iconRegisterEye{
 .signUptext{
     color: black;
     display: flex;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: bold;
     justify-content: center;
     margin: -5px 12px 4px  0;
@@ -139,7 +142,7 @@ p.iconRegisterEye{
 
 .signUpLink{
     color: #4803c9;
-    font-size: 12px;
+    font-size: 10px;
     font-weight: bold;
     margin-bottom: 5px;
     border:none;

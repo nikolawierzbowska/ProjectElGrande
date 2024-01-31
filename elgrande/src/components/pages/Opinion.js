@@ -16,7 +16,7 @@ function Opinion() {
             <ul className="opinionItems">
               <div className="contactContainerImage">
                 <div className="imgContainerOpinion">
-                  <img src="./picture/comment.png" alt="opinion photo" />
+                  <img src="./picture/comment.png" alt="opinion" />
                 </div>
               </div>
               <div className="opinionContainer">
