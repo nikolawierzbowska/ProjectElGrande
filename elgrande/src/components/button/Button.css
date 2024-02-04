@@ -4,8 +4,6 @@
   outline: none; 
   cursor: pointer;
   text-align: center;
-  letter-spacing: px;
-
 }
 
 .btn--outline {
@@ -18,9 +16,26 @@
   border-radius: 10px;
 }
 
+.btn--outline-logout {
+  background-color:#e77a99;
+  font-size: 1.1rem;
+  font-weight: bold;
+  white-space: nowrap;
+  width: 150px;
+  margin-right: 15px;
+  border-radius: 10px;
+}
+
+.btn--outline-logout:hover{
+  transition: all 0.3s ease-out;
+  transition: 250ms;
+  background-color: #7169D4;
+}
+
+
 .btn--outline:hover {
   transition: all 0.3s ease-out;
-  background: #e77a99;
+  background:  rgb(231, 122, 153);
   transition: 250ms;
 }
 
@@ -60,12 +75,10 @@
   white-space: nowrap;
 }
 
-
 .btn--outline--buy:hover, .btn--outline--accept:hover, .btn--outline--save:hover {
   background: #e77a99;
   border-color: #7169D4;
 }
-
 
 .btn--outline--save{
 
@@ -80,10 +93,87 @@
   padding:none;
   letter-spacing: 1px;
   white-space: nowrap;
-  margin-top: 10px;;
+  margin-top: 10px;
 }
 
 
 #more--info--id {
   display: flex;
+}
+
+@media screen and (max-width: 800px) {
+  .btn--outline {
+    background-color: #7169D4;
+    width: 10rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-right: 0px;
+    padding: 0.3rem;
+    font-size: 1.1rem;
+  }
+
+  .btn--outline:hover {
+    background:  #e77a99;
+  }
+
+  .nav-menu{
+    height: 100vh;
+  }
+}
+
+  @media screen and (max-width: 700px) {
+    .btn--outline {
+      width: 8.8rem;
+      margin-top: 0.45rem;
+      margin-bottom: 0.4rem;
+      font-size: 0.95rem;
+      padding: 0.25rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+  .btn--outline {
+    width: 7.4rem;
+    margin-top: 0.35rem;
+    margin-bottom: 0.3rem;
+    font-size: 0.82rem;
+  }
+}
+  
+@media screen and (max-width: 500px) {
+  .btn--outline {
+    width: 6.5rem;
+    margin-top: 0.35rem;
+    margin-bottom: 0.3rem;
+    font-size: 0.72rem;
+    border-radius: 7px;
+    border-width: 1.5px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .btn--outline {
+    width: 5rem;
+    margin-top: 0.15rem;
+    margin-bottom: 0.1rem;
+    font-size: 0.54rem;
+    border-radius: 5px;
+    border-width: 1px;
+    padding: 0.2rem;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .btn--outline {
+    width: 4.2rem;
+    margin-top: 0.15rem;
+    margin-bottom: 0.1rem;
+    font-size: 0.44rem;
+    border-radius: 5px;
+    border-width: 1px;
+    padding: 0.1rem;
+  }
+    .activeButton{
+    margin: -3px;
+    }
 }

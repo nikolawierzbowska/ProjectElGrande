@@ -1,6 +1,8 @@
 import axios from "axios";
 
-axios.defaults.headers.post["Content-Type"] = "application/json";
+axios.defaults.baseURL = "http://localhost:8080/api/v1";
+
+axios.defaults.headers.post["Content-type"] = "application/json";
 
 export const getAuthToken = () => {
   return window.localStorage.getItem("auth_token");

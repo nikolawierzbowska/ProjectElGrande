@@ -3,6 +3,7 @@ import { ButtonSignUp } from "../button/ButtonSignUp";
 import { ButtonLogin } from "../button/ButtonLogin";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
+import ButtonLogout from "../button/ButtonLogout";
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -10,20 +11,6 @@ function Navbar() {
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
-
-  const showButton = () => {
-    if (window.innerWidth <= 820) {
-      setButton(false);
-    } else {
-      setButton(true);
-    }
-  };
-
-  useEffect(() => {
-    showButton();
-  }, []);
-
-  window.addEventListener("resize", showButton);
 
   return (
     <>
@@ -68,28 +55,24 @@ function Navbar() {
                 KONTAKT
               </Link>
             </li>
-            <li>
-              <Link
-                to="/login"
-                className="nav-links-mobile"
-                onClick={closeMobileMenu}
-              >
-                ZALOGUJ
-              </Link>
+
+            <li className="activeButton">
+              <span onClick={closeMobileMenu} id="loginButtonMain">
+                {button && <ButtonLogin />}
+              </span>
             </li>
-            <li>
-              <Link
-                to="/sign-up"
-                className="nav-links-mobile"
-                onClick={closeMobileMenu}
-              >
-                ZAPISZ SIĘ
-              </Link>
+            <li className="activeButton">
+              <span onClick={closeMobileMenu} id="signButtonMain">
+                {button && <ButtonSignUp />}
+              </span>
+            </li>
+
+            <li className="activeButton">
+              <span onClick={closeMobileMenu} id="logoutButtonMain">
+                {button && <ButtonLogout />}
+              </span>
             </li>
           </ul>
-          {button && <ButtonLogin />}
-
-          {button && <ButtonSignUp />}
         </div>
       </nav>
     </>

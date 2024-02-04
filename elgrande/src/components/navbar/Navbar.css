@@ -15,7 +15,16 @@
     height: 5.4rem;
     width: 100%;
   }
-  
+
+  .btn--outline {
+    justify-content: center;
+  }
+
+  .nav-item{
+    margin-top:7px;
+  }
+
+
   .navbar-container {
     display: flex;
     justify-content: flex-end;
@@ -38,28 +47,25 @@
   
   .nav-menu {
     display: grid;
-    grid-template-columns: repeat(6, auto);
-    grid-gap: 10px;
+    grid-template-columns: repeat(7, auto);
     list-style: none;
     text-align: center;
     width: 65vw;
     justify-content: end;
- 
   }
   
   .nav-links {
     color: #000000;
-    display: flex;
+    display:inline; 
     align-items: center;
     text-decoration: none;
-    padding: 0.5rem 0.5rem 0.5rem 0.2rem;
+    padding: 0.5rem 1rem 0.5rem 0.4rem;
     height: 100%;
   }
-  
+
   .nav-links:hover {
-    border-bottom: 3px solid  #000000;;
-    transition: all 0.2s ease-out;
-  }
+    border-bottom: 2px solid  #000000; 
+   }
   
   .fa-bars {
     color:  #000000;   
@@ -67,15 +73,18 @@
     margin-top: 1px;
     margin-right: 0px;
   }
-  
-  .nav-links-mobile {
-    display: none;
-  }
-  
+   
   .menu-icon {
     display: none;
   }
 
+#logoutButtonMain, #nav-links-mobileLogout{
+  display: none;
+
+  }
+  a {
+    text-decoration: none;
+  }
  
   @media screen and (max-width: 1300px) {
     .navbar {
@@ -108,19 +117,18 @@
       position: absolute;
     }
   }
+
   @media screen and (max-width: 1100px){
     .navbar{
       position: fixed;
     }
   }
 
-
-
   @media screen and (max-width: 1000px) {
     .navbar {
       height: 3.6rem;
-     
     }
+
     .navbar-logo {
       width: 73px;   
       cursor: pointer;
@@ -130,7 +138,6 @@
       position: absolute;
     }
   }
-
 
   @media screen and (max-width: 800px) {
     .navbar {
@@ -210,30 +217,9 @@
       margin-top: -2.9px;
       
     }
-  
-    .nav-links-mobile {
-      display: block;
-      text-align: center;
-      margin: 0.8rem auto;
-      border-radius: 20px;
-      width: 50%;
-      text-decoration: none;
-      font-size: 1.3rem;
-      background-color: transparent;
-      color: #fff;
-      padding: 8px 30px;
-      border: 1px solid #fff;
-      transition: all 0.3s ease-out;
-    }
-  
-    .nav-links-mobile:hover {
-      background: #e77a99;
-      color: #4803c9;
-      transition: 250ms;
-    }
     }
 
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 800px) {
     .navbar {
       height: 2.7rem;
     } 
@@ -256,18 +242,7 @@
     .nav-links {
       text-align: center;
       padding: 9px ;
-      font-size: 1.2rem;     
-    }
-
-    .nav-links-mobile {
-      display: block;
-      text-align: center;
-      margin: 0.5rem auto;
-      border-radius: 20px;
-      font-size: 1.3rem;
-      padding: 5px 30px;
-      border: 0.7px solid #fff;
-      width: 50%;
+      font-size: 1.3rem;     
     }
 
     .fa-bars { 
@@ -283,6 +258,16 @@
       margin-top: -2.5px;
     }
   }
+
+  @media screen and (max-width: 700px) {
+   
+    .nav-links {
+      text-align: center;
+      padding: 7px ;
+      font-size: 1.1rem;     
+    }
+  }
+
 
   @media screen and (max-width: 600px) {
     .navbar {
@@ -300,18 +285,10 @@
       grid-gap:4.8px;
     }
   
-    .nav-links-mobile {
-      margin: 0.35rem auto;
-      border-radius: 20px;
-      font-size: 1rem;
-      padding: 4px 30px;
-      border: 0.5px solid #fff;
-      width: 50%;
-    }
 
     .nav-links {
-      font-size: 1.05rem;
-      padding: 7px;
+      font-size: 0.9rem;
+      padding: 4px;
     }
 
     .fa-bars { 
@@ -343,19 +320,10 @@
       top: 30px;
       grid-gap:4.5px;
     }
-  
-    .nav-links-mobile {
-      margin: 0.25rem auto;
-      border-radius: 20px;
-      font-size: 0.89rem;
-      padding: 4.2px 30px;
-      border: 0.5px solid #fff;
-      width: 50%;
-    }
 
     .nav-links {
-      font-size: 0.9rem;
-      padding: 4.5px;
+      font-size: 0.75rem;
+      padding: 2px;
     }
 
     .fa-bars { 
@@ -387,19 +355,12 @@
       top: 22px;
       grid-gap:4.5px;
     }
-   
-    .nav-links-mobile {
-      margin: 0.2rem auto;
-      border-radius: 20px;
-      font-size: 0.7rem;
-      padding: 3px 30px;
-      border: 0.3px solid #fff;
-      width: 50%;
-    }
+
 
     .nav-links {
-      font-size: 0.7rem;
-      padding: 2.5px;
+      font-size: 0.5rem;
+      padding: 1px;
+    
     }
 
     .fa-bars { 
@@ -433,19 +394,11 @@
     }
    
     .nav-links {
-      font-size: 0.5rem;  
-      padding: 2.1x;
+      font-size: 0.4rem;  
+      padding: 0px;
     }
 
-    .nav-links-mobile {
-      margin: 0.3rem auto;
-      border-radius: 20px;
-      font-size: 0.48rem;
-      padding: 2px 30px;
-      border: 0.2px solid #fff;
-      width: 50%;
-    }
-
+ 
     .fa-bars { 
       font-size: 0.45rem;; 
       margin-top: 0.55px;

@@ -77,13 +77,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
     
 .personalData{
     flex-direction: column;
     justify-content: center;
     flex-shrink: 0;
-    margin: 32px;
+    margin-top: 32px;
   
 }
 
@@ -94,18 +95,31 @@
     font-size: 0.8rem;
     border-color: #4803c9;
     border-radius: 10px ;
+    /* margin-bottom: 15px; */
 }
 
-.iconRegister{
+.iconRegister, .iconRegisterEye, .iconRegisterLock {
     color:  #4803c9;
     display: flex;
+    
 }
+
+div.iconRegisterEye{
+    position: relative;
+    margin-top: -17px;
+    margin-left: 195px;
+    font-size: 12px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
 
 div.iconRegister{
     display: flex;
     margin-left: 8px;
-    margin-top: -21px;
+    margin-top: -26px;
     font-size: 12px;
+    padding: 5px;
 }
     
 .signUpContainerRegister2{
@@ -149,11 +163,24 @@ div.iconRegister{
 .buttonContainerSignUp{
     display: flex;
     font-weight: bold;
-    margin-top:16px;
+    margin-top:30px;
     margin-bottom:16px;
     font-size: 1rem;
     justify-content: center;
+
 }
+
+span.infoRegister{
+    font-size: 10px;
+    color:red;
+    display: none;
+}
+
+input:invalid[focused="true"] ~ span{
+    display: block;
+}
+
+
 
 @media screen and (max-width: 1300px) {
     .signUp{

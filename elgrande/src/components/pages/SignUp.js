@@ -1,11 +1,14 @@
 import * as React from "react";
+
 import "../../App.css";
 import "./SignUp.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faPhoneVolume } from "@fortawesome/free-solid-svg-icons";
 import { faLock } from "@fortawesome/free-solid-svg-icons";
+import { faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+import { faEye } from "@fortawesome/free-solid-svg-icons";
+import { Navigate } from "react-router-dom";
 
 class SignUp extends React.Component {
   constructor(props) {
@@ -18,6 +21,12 @@ class SignUp extends React.Component {
       password: "",
       repeatedPassword: "",
       onRegister: props.onRegister,
+      passwordVisible: false,
+      passwordVisibleRepeated: false,
+      passwordFocused: false,
+      repeatedPasswordFocused: false,
+      emailFocused: false,
+      shouldRedirect: false,
     };
   }
 
@@ -27,6 +36,14 @@ class SignUp extends React.Component {
     this.setState({ [name]: value });
   };
 
+  handleFocus = (inputName) => {
+    this.setState({ [`${inputName}Focused`]: true });
+  };
+
+  handleBlur = (inputName) => {
+    this.setState({ [`${inputName}Focused`]: false });
+  };
+
   onSubmitRegister = (e) => {
     this.state.onRegister(
       e,
@@ -34,11 +51,36 @@ class SignUp extends React.Component {
       this.state.lastName,
       this.state.email,
       this.state.password,
-      this.state.repeatedPassword
+      this.state.repeatedPassword,
+      this.setState({ shouldRedirect: true })
     );
   };
 
+  togglePasswordVisibility = () => {
+    this.setState((prevState) => ({
+      passwordVisible: !prevState.passwordVisible,
+    }));
+  };
+
+  togglePasswordVisibilityRepeated = () => {
+    this.setState((prevState) => ({
+      passwordVisibleRepeated: !prevState.passwordVisibleRepeated,
+    }));
+  };
+
   render() {
+    const {
+      passwordVisible,
+      passwordVisibleRepeated,
+      passwordFocused,
+      repeatedPasswordFocused,
+      emailFocused,
+      shouldRedirect,
+    } = this.state;
+
+    if (shouldRedirect) {
+      return <Navigate to="/login" />;
+    }
     return (
       <>
         <div className="signUp">
@@ -56,6 +98,8 @@ class SignUp extends React.Component {
                             name="firstName"
                             placeholder="Imię"
                             onChange={this.onChangeHandler}
+                            required
+                            pattern="^[A-Za][a-z]*$"
                           ></input>
                           <div className="iconRegister">
                             <FontAwesomeIcon icon={faUser} />
@@ -68,6 +112,8 @@ class SignUp extends React.Component {
                             name="lastName"
                             placeholder="Nazwisko"
                             onChange={this.onChangeHandler}
+                            required
+                            pattern="^[A-Za][a-z]*$"
                           ></input>
                           <div className="iconRegister">
                             <FontAwesomeIcon icon={faUser} />
@@ -75,40 +121,85 @@ class SignUp extends React.Component {
                         </div>
                         <div className="personalData">
                           <input
-                            type="login"
+                            type="email"
                             id="email"
                             name="email"
                             placeholder="Email"
                             onChange={this.onChangeHandler}
+                            onFocus={() => this.handleFocus("email")}
+                            onBlur={() => this.handleBlur("email")}
+                            focused={emailFocused.toString()}
                           ></input>
                           <div className="iconRegister">
                             <FontAwesomeIcon icon={faEnvelope} />
                           </div>
+                          <span className="infoRegister">
+                            It should be a valid email address.
+                          </span>
                         </div>
 
                         <div className="personalData">
                           <input
-                            type="password"
+                            type={passwordVisible ? "text" : "password"}
                             id="password"
                             name="password"
                             placeholder="Hasło"
                             onChange={this.onChangeHandler}
+                            onFocus={() => this.handleFocus("password")}
+                            onBlur={() => this.handleBlur("password")}
+                            focused={passwordFocused.toString()}
+                            required
+                            pattern="^(?=.{6,})(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+*!=]).*$"
                           ></input>
+
                           <div className="iconRegister">
                             <FontAwesomeIcon icon={faLock} />
                           </div>
+                          <div
+                            className="iconRegisterEye"
+                            onClick={this.togglePasswordVisibility}
+                          >
+                            {!passwordVisible ? (
+                              <FontAwesomeIcon icon={faEyeSlash} />
+                            ) : (
+                              <FontAwesomeIcon icon={faEye} />
+                            )}
+                          </div>
+                          <span className="infoRegister">
+                            Min 6 char.,at least 1 number, 1 special char.
+                          </span>
                         </div>
+
                         <div className="personalData">
                           <input
-                            type="password"
+                            type={passwordVisibleRepeated ? "text" : "password"}
                             id="repeatedPassword"
                             name="repeatedPassword"
                             placeholder="Powtórz hasło"
                             onChange={this.onChangeHandler}
+                            onFocus={() => this.handleFocus("repeatedPassword")}
+                            onBlur={() => this.handleBlur("repeatedPassword")}
+                            focused={repeatedPasswordFocused.toString()}
+                            required
+                            pattern={this.state.password}
                           ></input>
+
                           <div className="iconRegister">
                             <FontAwesomeIcon icon={faLock} />
                           </div>
+                          <div
+                            className="iconRegisterEye"
+                            onClick={this.togglePasswordVisibilityRepeated}
+                          >
+                            {!passwordVisibleRepeated ? (
+                              <FontAwesomeIcon icon={faEyeSlash} />
+                            ) : (
+                              <FontAwesomeIcon icon={faEye} />
+                            )}
+                          </div>
+                          <span className="infoRegister">
+                            Passwords don't match!
+                          </span>
                         </div>
                         <div className="buttonContainerSignUp">
                           <button

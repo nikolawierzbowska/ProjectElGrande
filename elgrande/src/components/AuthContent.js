@@ -10,19 +10,11 @@ export default class AuthContent extends React.Component {
     };
   }
 
-  componentDidMount() {
-    request("GET", "http://localhost:8080/auth/message", {}).then(
-      (response) => {
-        this.setState({ data: response.data });
-      }
-    );
-  }
-
   render() {
     return (
       <div>
-        {/* {this.state.data &&
-          this.state.data.map((line) => <li key={line}>{line}</li>)} */}
+        {this.state.data &&
+          this.state.data.map((line) => <li key={line}>{line}</li>)}
       </div>
     );
   }

@@ -13,14 +13,16 @@ import Course from "../components/pages/Course";
 import NotFound from "../components/button/NotFound";
 import Payment from "../components/pages/Payment";
 import AuthContent from "../components/AuthContent";
+
 import { request, setAuthToken } from "../axios_helper";
+import ButtonLogout from "./button/ButtonLogout";
 
 export default class AppContent extends React.Component {
   constructor(props) {
     super(props);
   }
 
-  onLogin = (e, email, password) => {
+  onLogin = (e, email, password, errorMessage) => {
     e.preventDefault();
     request("POST", "http://localhost:8080/api/v1/auth/login", {
       email: email,
@@ -30,12 +32,16 @@ export default class AppContent extends React.Component {
         setAuthToken(response.data.token);
         document.getElementById("email").value = "";
         document.getElementById("password").value = "";
+        document.getElementById("loginButtonMain").style.display = "none";
+        document.getElementById("signButtonMain").style.display = "none";
+        document.getElementById("logoutButtonMain").style.display = "block";
       })
       .catch((error) => {
         console.error("Error during login:", error);
 
         if (error.response && error.response.status === 401) {
           console.log("Unauthorized - invalid credentials");
+          this.setState({ errorMessage: error.message });
         }
       });
   };
@@ -56,6 +62,7 @@ export default class AppContent extends React.Component {
         document.getElementById("email").value = "";
         document.getElementById("password").value = "";
         document.getElementById("repeatedPassword").value = "";
+        document.getElementById("signButtonMain").style.display = "none";
       })
       .catch((error) => {
         console.log(error);
@@ -73,11 +80,22 @@ export default class AppContent extends React.Component {
             <Route path="/opinion" element={<Opinion />} />
             <Route path="/price" element={<Price />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/login" element={<Login onLogin={this.onLogin} />} />
+            <Route
+              path="/login"
+              element={
+                <Login
+                  onLogin={(e, email, password, errorMessage) =>
+                    this.onLogin(e, email, password, errorMessage)
+                  }
+                />
+              }
+            />
             <Route
               path="/sign-up"
               element={<SignUp onRegister={this.onRegister} />}
             />
+            <Route path="/" element={<ButtonLogout />} />
+
             <Route path="/more-info" element={<MoreInfo />} />
             <Route path="/how-to-sign-up" element={<Course />} />
             <Route path="/payment" element={<Payment />} />

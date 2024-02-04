@@ -9,7 +9,7 @@
     text-transform: uppercase;
     font-weight: 800;
     letter-spacing: 4px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .loginContainer{
@@ -83,7 +83,7 @@
     flex-direction: column;
     justify-content: center;
     flex-shrink: 0;
-    margin: 30px 10px;
+    margin: 20px 10px 30px 10px;
 }
 
 .personalDataLogin > input{
@@ -94,42 +94,50 @@
     border-color: #4803c9;
     border-radius: 10px ;
     letter-spacing: none;
+    
 }
 
 div.forgetPssord{
     font-size: 10px;
     font-weight: bold;
     text-align: right;
-    margin: -9px 12px 15px  0;
+    margin: -14px 12px 15px  0;
     color:  #4803c9;
 }
 
-div.forgetPssord, div.iconRegisterEye, button.btn.signUpLink:hover{
+div.forgetPssord, div.iconLoginEye, button.btn.signUpLink:hover{
 cursor: pointer;
 }
 
-.iconLogin, .iconRegisterEye{
+.iconLogin, .iconLoginEye{
     color:  #4803c9;
     display: flex;
+}
+
+div.iconLoginEye{
+    display: flex;
+    position: relative;
+    margin-top: -12px;
+    margin-left: 195px;
+    font-size: 12px;
 }
 
 div.iconLogin{
     display: flex;
-    position: relative;
+
     margin-left: 10px;
-    margin-top: -23px;
+    margin-top: -21px;
     font-size: 12px;
 }
 
-div.iconRegisterEye{
-    display: flex;
-    position: relative;
-    margin-top: -15px;
-    margin-left: 195px;
+span.error{
+    color: red;
+    font-weight: bold;
+    font-size: 12px;
   
-    font-size: 12px;
-
 }
+
+
 
 .signUptext{
     color: black;
