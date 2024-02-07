@@ -1,10 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../../App.css";
 import "./Opinion.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
+import { request } from "../../axios_helper.js";
 
 function Opinion() {
+  const [opinions, setOpinion] = useState([]);
+
+  useEffect(() => {
+    request(
+      "GET",
+      "http://localhost:8080/api/v1/courses/0b20d02b-42d9-4328-9254-e91421e356ac/opinions"
+    )
+      .then((response) => {
+        setOpinion(response.data);
+        console.log(response.data);
+      })
+      .catch((error) => {
+        console.error("Error during get all opinions:", error);
+      });
+  }, []);
+
   return (
     <>
       <div className="opinions">
@@ -19,61 +36,18 @@ function Opinion() {
                   <img src="./picture/comment.png" alt="opinion" />
                 </div>
               </div>
-              <div className="opinionContainer">
-                <li className="opinionItem">
-                  <p className="quote">
-                    <FontAwesomeIcon icon={faQuoteLeft} />
-                  </p>
-                  test test test test test test test test test testest test test
-                  test test testtest test testtest test test
-                  <div className="name">NAME</div>
-                </li>
-              </div>
-              <div className="opinionContainer">
-                <li className="opinionItem">
-                  <p className="quote">
-                    <FontAwesomeIcon icon={faQuoteLeft} />
-                  </p>
-                  test test test test test test test test test test
-                  <div className="name">NAME</div>
-                </li>
-              </div>
-              <div className="opinionContainer">
-                <li className="opinionItem">
-                  <p className="quote">
-                    <FontAwesomeIcon icon={faQuoteLeft} />
-                  </p>
-                  test test test test test test test test test test
-                  <div className="name">NAME</div>
-                </li>
-              </div>
-              <div className="opinionContainer">
-                <li className="opinionItem">
-                  <p className="quote">
-                    <FontAwesomeIcon icon={faQuoteLeft} />
-                  </p>
-                  test test test test test test test test test test
-                  <div className="name">NAME</div>
-                </li>
-              </div>
-              <div className="opinionContainer">
-                <li className="opinionItem">
-                  <p className="quote">
-                    <FontAwesomeIcon icon={faQuoteLeft} />
-                  </p>
-                  test test test test test test test test test test
-                  <div className="name">NAME</div>
-                </li>
-              </div>
-              <div className="opinionContainer">
-                <li className="opinionItem">
-                  <p className="quote">
-                    <FontAwesomeIcon icon={faQuoteLeft} />
-                  </p>
-                  test test test test test test test test test test
-                  <div className="name">NAME</div>
-                </li>
-              </div>
+              {opinions.map((opinion) => (
+                <div className="opinionContainer">
+                  <li key={opinion.id} className="opinionItem">
+                    <p className="quote">
+                      <FontAwesomeIcon icon={faQuoteLeft} />
+                    </p>
+                    <div className="opinionText">{opinion.description}</div>
+
+                    <div className="name">{opinion.user.firstName}</div>
+                  </li>
+                </div>
+              ))}
             </ul>
           </div>
         </div>

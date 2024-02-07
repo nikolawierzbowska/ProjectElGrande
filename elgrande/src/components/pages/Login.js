@@ -9,19 +9,16 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 import { faLock } from "@fortawesome/free-solid-svg-icons";
-import { Navigate } from "react-router-dom";
 
 class Login extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false };
 
     this.state = {
       email: "",
       password: "",
       passwordVisible: false,
       onLogin: props.onLogin,
-      shouldRedirect: false,
     };
   }
 
@@ -32,13 +29,7 @@ class Login extends React.Component {
   };
 
   onSubmitLogin = (e) => {
-    this.props.onLogin(
-      e,
-      this.state.email,
-      this.state.password,
-      this.setState({ errorMessage: "" }),
-      this.setState({ shouldRedirect: true })
-    );
+    this.state.onLogin(e, this.state.email, this.state.password);
   };
 
   togglePasswordVisibility = () => {
@@ -48,12 +39,7 @@ class Login extends React.Component {
   };
 
   render() {
-    const { hasError, error } = this.state;
     const { passwordVisible, shouldRedirect } = this.state;
-
-    // if (shouldRedirect) {
-    //   return <Navigate to="/" />;
-    // }
 
     return (
       <>
@@ -71,9 +57,7 @@ class Login extends React.Component {
                   <div className="loginItemContainer">
                     <li className="loginItem">
                       <div className="containerFormLogin">
-                        <span className="error">
-                          {hasError ? error.message : ""}
-                        </span>
+                        <span className="error"></span>
                         <form onSubmit={this.onSubmitLogin}>
                           <div className="personalDataLogin">
                             <input

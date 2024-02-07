@@ -78,9 +78,9 @@ class SignUp extends React.Component {
       shouldRedirect,
     } = this.state;
 
-    if (shouldRedirect) {
-      return <Navigate to="/login" />;
-    }
+    // if (shouldRedirect) {
+    //   return <Navigate to="/login" />;
+    // }
     return (
       <>
         <div className="signUp">

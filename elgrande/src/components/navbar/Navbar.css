@@ -21,7 +21,7 @@
   }
 
   .nav-item{
-    margin-top:7px;
+    margin-top:4px;
   }
 
 
@@ -52,6 +52,7 @@
     text-align: center;
     width: 65vw;
     justify-content: end;
+    align-items: center;
   }
   
   .nav-links {
@@ -59,7 +60,7 @@
     display:inline; 
     align-items: center;
     text-decoration: none;
-    padding: 0.5rem 1rem 0.5rem 0.4rem;
+    padding: 0.5rem 0.5rem 0.5rem 0.4rem;
     height: 100%;
   }
 
@@ -78,10 +79,7 @@
     display: none;
   }
 
-#logoutButtonMain, #nav-links-mobileLogout{
-  display: none;
 
-  }
   a {
     text-decoration: none;
   }

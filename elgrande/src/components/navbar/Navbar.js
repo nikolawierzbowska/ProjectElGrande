@@ -7,16 +7,50 @@ import ButtonLogout from "../button/ButtonLogout";
 
 function Navbar() {
   const [click, setClick] = useState(false);
-  const [button, setButton] = useState(true);
+  const [button, setButton] = useState({
+    loginButton: true,
+    signButton: true,
+    logoutButton: false,
+  });
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
+
+  useEffect(() => {
+    const authToken = localStorage.getItem("auth_token");
+    if (authToken) {
+      setButton((prevState) => ({
+        ...prevState,
+        loginButton: false,
+        signButton: false,
+        logoutButton: true,
+      }));
+    } else {
+      setButton((prevState) => ({
+        ...prevState,
+        loginButton: true,
+        signButton: true,
+        logoutButton: false,
+      }));
+    }
+  }, []);
+
+  const handleClickLogoutButton = (e) => {
+    setButton({
+      loginButton: true,
+      signButton: true,
+      logoutButton: false,
+    });
+    localStorage.removeItem("auth_token");
+
+    // window.location.href = "/";
+  };
 
   return (
     <>
       <nav className="navbar">
         <div className="navbar-container">
-          <Link to="/" onClick={closeMobileMenu}>
+          <Link to="/">
             <img className="navbar-logo" src="logo.png" alt="logo MATAMA 5.0" />
           </Link>
           <div className="menu-icon" onClick={handleClick}>
@@ -58,18 +92,18 @@ function Navbar() {
 
             <li className="activeButton">
               <span onClick={closeMobileMenu} id="loginButtonMain">
-                {button && <ButtonLogin />}
+                {button.loginButton && <ButtonLogin />}
               </span>
             </li>
             <li className="activeButton">
               <span onClick={closeMobileMenu} id="signButtonMain">
-                {button && <ButtonSignUp />}
+                {button.signButton && <ButtonSignUp />}
               </span>
             </li>
 
             <li className="activeButton">
-              <span onClick={closeMobileMenu} id="logoutButtonMain">
-                {button && <ButtonLogout />}
+              <span onClick={handleClickLogoutButton} id="logoutButtonMain">
+                {button.logoutButton && <ButtonLogout />}
               </span>
             </li>
           </ul>
