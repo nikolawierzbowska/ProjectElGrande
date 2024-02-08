@@ -94,7 +94,7 @@
 }
 
 
-.courseLine{
+.courseLine, .roleLine{
     border: 1px solid  #4803c9;;
     border-radius: 7px;
     padding: 10px;
@@ -103,6 +103,13 @@
     display: flex;
     align-items: center;
     margin: 10px;
+}
+
+.spanButtonsRole{
+    margin-left: 60px;
+    display: block;
+    width: 100%;
+    text-align: right;
 }
 
 .btn--outline--update{

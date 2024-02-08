@@ -54,7 +54,6 @@ function CoursesAdmin() {
       .then((response) => {
         if (response.status === 200) {
           console.log(response.data.name);
-          // document.getElementById("newCourse").value = "";
           document.getElementsByClassName("errorUpdate")[0].textContent = "";
 
           setCourses(
