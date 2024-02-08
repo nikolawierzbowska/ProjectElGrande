@@ -1,13 +1,6 @@
 import * as React from "react";
 import Navbar from "../components/navbar/Navbar";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-  useHistory,
-  useNavigate,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "../App.css";
 import Home from "../components/pages/Home";
 import Opinion from "../components/pages/Opinion";
@@ -69,7 +62,7 @@ class AppContent extends React.Component {
           console.log("Unauthorized - invalid credentials");
 
           const errorInfo = document.getElementsByClassName("error");
-          errorInfo[0].textContent = "Niepoprawnyy email lub hasło";
+          errorInfo[0].textContent = "Niepoprawny email lub hasło";
         }
       });
   };

@@ -40,6 +40,7 @@
     box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
     padding: 24x;
     color: blue;
+    align-items: center;
     
 }
 
@@ -55,7 +56,7 @@
 .grid-c-title-text{
     font-weight: 600;
     font-size: 20px;
-    color: #8e2beb;;
+    color: #8e2beb;
     text-align: center;
     align-items: center;
    ;
@@ -65,10 +66,63 @@
 
 .grid-c1-content{
     padding: 16px;
-    margin-top: 8px;
+    margin-top: 10px;
     margin-bottom: 20px;
     color:black;
+    font-weight: 600;
     font-size: 15px;
     text-align: center;
 
+}
+
+.loginItemContainer{
+    margin: 0;
+}
+
+/* .tilePageAdmin{
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 55px;
+    justify-content: center;
+} */
+
+
+.btn--outline--accept{
+    background-color:#8e2beb;
+}
+
+
+.courseLine{
+    border: 1px solid  #4803c9;;
+    border-radius: 7px;
+    padding: 10px;
+    text-align: left;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.btn--outline--update{
+    width: 50px;
+}
+
+.spanButtons{
+    display: block;
+    width: 100%;
+    text-align: right;
+}
+
+span.errorUpdate{
+    color: red;
+    font-weight: bold;
+    font-size: 12px;
+  
+}
+
+textarea.updatedText{
+    height: 30px;
+    width: 300px;
 }

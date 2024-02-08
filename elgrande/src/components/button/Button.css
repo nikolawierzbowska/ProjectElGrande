@@ -70,12 +70,37 @@
   background-color: #7169D4;
   color: white;
   font-weight: bold;
-  padding:none;
+  padding:0;
   letter-spacing: 1px;
   white-space: nowrap;
 }
 
-.btn--outline--buy:hover, .btn--outline--accept:hover, .btn--outline--save:hover {
+.btn--outline-update, .btn--outline-delete{
+  width: 55px;
+  height: 25px;
+  text-align: center;
+  font-size: 0.7rem;
+  border: 0.5px solid rgba(255, 255, 255, 0.18); 
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.7);
+  border-radius: 7px ;
+  background-color: #8e2beb;
+  color: white;
+  font-weight: bold;
+  padding:0;
+  margin: 3px 5px;
+  white-space: nowrap;
+  text-align: center;
+  align-items: center;
+
+  justify-content: center;
+}
+
+.btn--outline-delete{
+  background-color: #d33175;;
+}
+
+.btn--outline--buy:hover, .btn--outline--accept:hover, .btn--outline--save:hover,
+.btn--outline-update:hover, .btn--outline-delete:hover {
   background: #e77a99;
   border-color: #7169D4;
 }
@@ -90,7 +115,7 @@
   background-color: #7169D4;
   color: white;
   font-weight: bold;
-  padding:none;
+  padding:0;
   letter-spacing: 1px;
   white-space: nowrap;
   margin-top: 10px;

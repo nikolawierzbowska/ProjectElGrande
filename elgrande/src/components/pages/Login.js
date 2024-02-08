@@ -39,7 +39,7 @@ class Login extends React.Component {
   };
 
   render() {
-    const { passwordVisible, shouldRedirect } = this.state;
+    const { passwordVisible } = this.state;
 
     return (
       <>

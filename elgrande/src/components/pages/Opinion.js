@@ -37,8 +37,8 @@ function Opinion() {
                 </div>
               </div>
               {opinions.map((opinion) => (
-                <div className="opinionContainer">
-                  <li key={opinion.id} className="opinionItem">
+                <div className="opinionContainer" key={opinion.id}>
+                  <li className="opinionItem">
                     <p className="quote">
                       <FontAwesomeIcon icon={faQuoteLeft} />
                     </p>
