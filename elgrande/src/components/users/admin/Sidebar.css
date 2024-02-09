@@ -15,6 +15,9 @@
     
    
 }
+path::after {
+    fill: rgb(212, 164, 231);
+}
 
 .sidebarInfoUser{
     display: flex;

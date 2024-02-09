@@ -24,7 +24,6 @@ export const request = (method, url, data) => {
       data: data,
     });
   }
-
   return axios({
     method: method,
     url: url,

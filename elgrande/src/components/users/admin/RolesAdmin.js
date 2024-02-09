@@ -8,6 +8,9 @@ import ButtonDelete from "../../button/ButtonDelete.js";
 import Sidebar from "./Sidebar";
 
 function RolesAdmin() {
+  const [error, setError] = useState("");
+  const [errorUpdate, setErrorUpdate] = useState("");
+
   const [roles, setRoles] = useState([]);
   const [state, setState] = useState({ name: "" });
 
@@ -73,10 +76,8 @@ function RolesAdmin() {
 
         if (error.response && error.response.status === 401) {
           console.log("Unauthorized - invalid credentials");
-
-          const errorInfo = document.getElementsByClassName("errorUpdate");
-          errorInfo[0].textContent = "Już istnieje taka nazwa ";
         }
+        setErrorUpdate(error.response.data.info);
       });
   };
 
@@ -118,15 +119,7 @@ function RolesAdmin() {
       .catch((error) => {
         console.error("Error during add new role:", error);
 
-        if (
-          (error.response && error.response.status === 401) ||
-          error.response.status === 404
-        ) {
-          console.log("Unauthorized - invalid credentials");
-
-          const errorInfo = document.getElementsByClassName("error");
-          errorInfo[0].textContent = "Już istnieje taka nazwa ";
-        }
+        setError(error.response.data.info);
       });
   };
 
@@ -140,42 +133,46 @@ function RolesAdmin() {
               <h3 className="grid-c-title-text">Role użytkownika:</h3>
             </div>
             <div className="grid-c1-content">
-              <span className="errorUpdate"></span>
+              <span className="errorUpdate">{errorUpdate}</span>
               {roles.map((role) => (
-                <li className="roleLine" key={role.id}>
-                  {editRoleId === role.id ? (
-                    <textarea
-                      className="updatedText"
-                      type="text"
-                      value={editedRoleName}
-                      onChange={handleInputChange}
-                    />
-                  ) : (
-                    role.name
-                  )}
-
-                  <span className="spanButtonsRole">
+                <ul>
+                  <li className="roleLine" key={role.id}>
                     {editRoleId === role.id ? (
-                      [
-                        <ButtonUpdate onClick={() => handleUpdateRole(role.id)}>
-                          Zapisz
-                        </ButtonUpdate>,
-                        <ButtonDelete onClick={() => handleCancel()}>
-                          Anuluj
-                        </ButtonDelete>,
-                      ]
+                      <textarea
+                        className="updatedText"
+                        type="text"
+                        value={editedRoleName}
+                        onChange={handleInputChange}
+                      />
                     ) : (
-                      <>
-                        <ButtonUpdate
-                          onClick={() => handleEditClick(role.id, role.name)}
-                        />
-                        <ButtonDelete
-                          onClick={() => handleDeleteRole(role.id)}
-                        />
-                      </>
+                      role.name
                     )}
-                  </span>
-                </li>
+
+                    <span className="spanButtonsRole">
+                      {editRoleId === role.id ? (
+                        [
+                          <ButtonUpdate
+                            onClick={() => handleUpdateRole(role.id)}
+                          >
+                            Zapisz
+                          </ButtonUpdate>,
+                          <ButtonDelete onClick={() => handleCancel()}>
+                            Anuluj
+                          </ButtonDelete>,
+                        ]
+                      ) : (
+                        <>
+                          <ButtonUpdate
+                            onClick={() => handleEditClick(role.id, role.name)}
+                          />
+                          <ButtonDelete
+                            onClick={() => handleDeleteRole(role.id)}
+                          />
+                        </>
+                      )}
+                    </span>
+                  </li>
+                </ul>
               ))}
             </div>
           </div>
@@ -188,7 +185,7 @@ function RolesAdmin() {
               <div className="loginItemContainer">
                 <li className="loginItem">
                   <div className="containerFormLogin">
-                    <span className="error"></span>
+                    <span className="error">{error}</span>
                     <form onSubmit={handleAddNewRole}>
                       <div className="personalDataLogin">
                         <input

@@ -8,6 +8,9 @@ import ButtonUpdate from "../../button/ButtonUpdate.js";
 import ButtonDelete from "../../button/ButtonDelete.js";
 
 function CoursesAdmin() {
+  const [error, setError] = useState("");
+  const [errorUpdate, setErrorUpdate] = useState("");
+
   const [courses, setCourses] = useState([]);
   const [state, setState] = useState({ name: "" });
 
@@ -26,7 +29,7 @@ function CoursesAdmin() {
   };
 
   const handleInputChange = (event) => {
-    const value = event.target.value;
+    const value = event.target.value.toUpperCase();
     setEditedCourseName(value);
   };
 
@@ -69,15 +72,8 @@ function CoursesAdmin() {
         }
       })
       .catch((error) => {
-        console.error("Error during login:", error);
-
-        if (error.response && error.response.status === 401) {
-          console.log("Unauthorized - invalid credentials");
-
-          const errorInfo = document.getElementsByClassName("errorUpdate");
-          errorInfo[0].textContent =
-            "Max. długość 35 / już istnieje taka nazwa ";
-        }
+        console.error("Error during update Course name:", error);
+        setErrorUpdate(error.response.data.info);
       });
   };
 
@@ -117,15 +113,10 @@ function CoursesAdmin() {
         }
       })
       .catch((error) => {
-        console.error("Error during login:", error);
+        console.error("Error during add new course:", error);
 
-        if (error.response && error.response.status === 401) {
-          console.log("Unauthorized - invalid credentials");
-
-          const errorInfo = document.getElementsByClassName("error");
-          errorInfo[0].textContent =
-            "Max. długość 35 / już istnieje taka nazwa ";
-        }
+        setError(error.response.data.errors[0].defaultMessage);
+        console.log(error);
       });
   };
 
@@ -141,7 +132,7 @@ function CoursesAdmin() {
               </h3>
             </div>
             <div className="grid-c1-content">
-              <span className="errorUpdate"></span>
+              <span className="errorUpdate">{errorUpdate}</span>
               {courses.map((course) => (
                 <li className="courseLine" key={course.id}>
                   {editCourseId === course.id ? (
@@ -193,7 +184,7 @@ function CoursesAdmin() {
               <div className="loginItemContainer">
                 <li className="loginItem">
                   <div className="containerFormLogin">
-                    <span className="error"></span>
+                    <span className="error">{error}</span>
                     <form onSubmit={handleAddNewCourse}>
                       <div className="personalDataLogin">
                         <input
