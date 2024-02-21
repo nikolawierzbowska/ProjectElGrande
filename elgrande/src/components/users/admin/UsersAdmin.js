@@ -17,11 +17,11 @@ function UsersAdmin() {
   const [editRoleId, setEditRoleId] = useState(null);
   const [editedRoleName, setEditedRoleName] = useState("");
 
-  const onChangeHandler = (e) => {
-    const name = e.target.name;
-    const value = e.target.value;
-    setState({ ...state, [name]: value });
-  };
+  // const onChangeHandler = (e) => {
+  //   const name = e.target.name;
+  //   const value = e.target.value;
+  //   setState({ ...state, [name]: value });
+  // };
 
   const handleEditClick = (id, name, roleId) => {
     setEditUserId(id);
@@ -30,7 +30,7 @@ function UsersAdmin() {
   };
 
   const handleInputChange = (event) => {
-    const value = event.target.value;
+    const value = event.target.value.toUpperCase();
     setEditedRoleName(value);
   };
 
@@ -116,21 +116,22 @@ function UsersAdmin() {
     <>
       <Sidebar />
       <div className="main-content-holder">
-        <div className="content-grid-one">
-          <div className="grid-one-item grid-common grid-c1">
-            <div className="grid-c-title">
-              <h3 className="grid-c-title-text">Lista użytkowników:</h3>
-            </div>
-            <div className="grid-c1-content">
-              <span className="errorUpdate">{errorUpdate}</span>
-              {users.map((user) => (
-                <li className="userLine" key={user.id}>
+        <div className="content-grid-three">
+          {users.map((user) => (
+            <div className="grid-one-item grid-common grid-c1" key={user.id}>
+              {/* <div className="grid-c-title">
+                <h3 className="grid-c-title-text">Lista użytkowników:</h3>
+              </div> */}
+              <div className="grid-c1-content">
+                <span className="errorUpdate">{errorUpdate}</span>
+
+                <li className="userLine">
                   <ul>
-                    {user.uerRoles.map((role) => (
+                    {user.userRoles.map((role) => (
                       <li key={role.id}>
                         {editUserId === user.id && editRoleId === role.id ? (
                           <textarea
-                            className="updatedText"
+                            className="updatedTextUser"
                             type="text"
                             value={editedRoleName}
                             onChange={handleInputChange}
@@ -176,16 +177,16 @@ function UsersAdmin() {
                     ))}
                   </ul>
                 </li>
-              ))}
+              </div>
             </div>
-          </div>
+          ))}
 
-          <div className="grid-one-item grid-common grid-c1">
+          {/* <div className="grid-one-item grid-common grid-c1">
             <div className="grid-c-title">
               <h3 className="grid-c-title-text">.... </h3>
             </div>
             <div className="grid-c1-content"></div>
-          </div>
+          </div> */}
         </div>
       </div>
     </>

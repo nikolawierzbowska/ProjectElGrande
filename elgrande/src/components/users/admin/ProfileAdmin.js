@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../../../App.css";
 import "./Sidebar.css";
 import "./Admin.css";
-import Sidebar from "./Sidebar";
+import { fetchUserData } from "./Sidebar";
 import "../../pages/Login.css";
+import { request } from "../../../axios_helper";
+import Sidebar from "./Sidebar";
 
 function ProfileAdmin() {
   return (
     <>
       <Sidebar />
-
       <div className="main-content-holder">
         <div className="content-grid-one">
           <div className="grid-one-item grid-common grid-c1">

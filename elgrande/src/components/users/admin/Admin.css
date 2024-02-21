@@ -13,6 +13,15 @@
     row-gap: 50px;
 }
 
+.content-grid-one1{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 60px;
+    margin-left: 280px;
+    margin-right: 50px;
+    
+}
+
 .content-grid-two{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -23,6 +32,16 @@
     display: grid;
     row-gap:20px;
     height: 100%;
+}
+
+.content-grid-three{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 50px;
+    margin-top: 60px;
+    margin-left: 280px;
+    margin-right: 50px;
+    row-gap: 50px;
 }
 
 
@@ -56,7 +75,7 @@
 .grid-c-title-text{
     font-weight: 600;
     font-size: 20px;
-    color: #8e2beb;
+    color: #7169D4;
     text-align: center;
     align-items: center;
    ;
@@ -75,9 +94,9 @@
 
 }
 
-.loginItemContainer{
+/* .loginItemContainer{
     margin: 0;
-}
+} */
 
 /* .tilePageAdmin{
     font-size: 20px;
@@ -89,16 +108,14 @@
 } */
 
 
-.btn--outline--accept{
-    background-color:#8e2beb;
-}
+
 
 ul{
     list-style: none;
 }
 
-.courseLine, .roleLine, .userLine{
-    border: 1px solid  #4803c9;;
+.courseLine, .roleLine,.userLine, .opinionLine{
+    border: 1px solid  #7169D4;
     border-radius: 7px;
     padding: 10px;
     text-align: left;
@@ -106,6 +123,11 @@ ul{
     display: flex;
     align-items: center;
     margin: 10px;
+}
+
+.opinionLine{
+  
+    text-align: center;
 }
 .userLine{
     width:280px
@@ -147,4 +169,31 @@ span.errorUpdate{
 textarea.updatedText{
     height: 30px;
     width: 300px;
+}
+
+textarea.updatedTextUser{
+    height: 30px;
+    width: 100px;
+}
+
+.userNameOpinion{
+    color:#4803c9;
+    justify-content: center;
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.grid-c1-contentOpinion{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: black;
+    font-weight: 600;
+    font-size: 15px;
+    text-align: center;
+
 }

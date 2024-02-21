@@ -14,9 +14,10 @@
   width: 150px;
   margin-right: 15px;
   border-radius: 10px;
+ 
 }
 
-.btn--outline-logout {
+.btn--outline-logout, .btn--outline-panel {
   background-color:#e77a99;
   font-size: 1.1rem;
   font-weight: bold;
@@ -24,6 +25,13 @@
   width: 150px;
   margin-right: 15px;
   border-radius: 10px;
+}
+.btn--outline-panel{
+  background-color:#7169D4;
+}
+
+.btn--outline-panel:hover{
+  background-color:#e77a99;
 }
 
 .btn--outline-logout:hover{
@@ -59,7 +67,7 @@
 }
 
 
-.btn--outline--accept, .btn--outline--buy {
+.btn--outline--accept, .btn--outline--buy, .btn--outline--accept-admin {
   width: 220px;
   height: 32px;
   text-align: center;
@@ -74,6 +82,9 @@
   letter-spacing: 1px;
   white-space: nowrap;
 }
+.btn--outline--accept-admin{
+  background-color:#7169D4;
+}
 
 .btn--outline-update, .btn--outline-delete{
   width: 55px;
@@ -83,7 +94,7 @@
   border: 0.5px solid rgba(255, 255, 255, 0.18); 
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.7);
   border-radius: 7px ;
-  background-color: #8e2beb;
+  background-color: #7169D4;
   color: white;
   font-weight: bold;
   padding:0;
@@ -119,6 +130,8 @@
   letter-spacing: 1px;
   white-space: nowrap;
   margin-top: 10px;
+  width: 200px;
+  height: 20px;
 }
 
 

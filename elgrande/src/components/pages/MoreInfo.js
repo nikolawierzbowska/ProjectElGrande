@@ -3,6 +3,28 @@ import "../../App.css";
 import "./MoreInfo.css";
 import { ButtonSave } from "../button/ButtonSave";
 
+const listLessons = [
+  "Liczby i Potęgi",
+  "Logarytmy",
+  "Procenty",
+  "Równania",
+  "Nierówności",
+  " Funkcja liniowa",
+  "Funkcja kwadratowa",
+  "Funkcja wymierna",
+  "Funkcja wykładnicza",
+  "Funkcja logarytmiczna",
+  "Wyrażenia algebraiczne",
+  "Wielomiany",
+  "Ciągi",
+  "Trygonometria",
+  "Geometria anlityczna",
+  "Planimetria",
+  "Stereometria",
+  "Statystyka",
+  "Prawdopodobieństwo",
+  "Arkusze maturalne",
+];
 function MoreInfo() {
   return (
     <>
@@ -39,18 +61,25 @@ function MoreInfo() {
                     </div>
 
                     <div className="taskContainer">
-                      <div className="task">
-                        <p className="taskName">Liczby i Potęgi</p>
+                      {listLessons.map((lesson, index) => {
+                        return (
+                          <ul key={index}>
+                            <div className="task">
+                              <li className="taskName">{lesson}</li>
 
+                              {/* 
                         <p className="taskName">Logarytmy</p>
 
                         <p className="taskName">Procenty</p>
 
                         <p className="taskName">Równania</p>
 
-                        <p className="taskName">Nierówności</p>
-                      </div>
-                      <div className="task">
+                        <p className="taskName">Nierówności</p> */}
+                            </div>
+                          </ul>
+                        );
+                      })}
+                      {/* <div className="task">
                         <p className="taskName">Funkcja liniowa</p>
 
                         <p className="taskName">Funkcja kwadratowa</p>
@@ -82,7 +111,7 @@ function MoreInfo() {
                         <p className="taskName">Prawdopodobieństwo</p>
 
                         <p className="taskName">Arkusze maturalne</p>
-                      </div>
+                      </div> */}
                     </div>
                     <ButtonSave buttonStyle="btn--outline--save" />
                   </div>

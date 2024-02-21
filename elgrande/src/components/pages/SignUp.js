@@ -8,7 +8,6 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faLock } from "@fortawesome/free-solid-svg-icons";
 import { faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
-import { Navigate } from "react-router-dom";
 
 class SignUp extends React.Component {
   constructor(props) {
@@ -27,6 +26,7 @@ class SignUp extends React.Component {
       repeatedPasswordFocused: false,
       emailFocused: false,
       shouldRedirect: false,
+      error: "",
     };
   }
 
@@ -52,6 +52,7 @@ class SignUp extends React.Component {
       this.state.email,
       this.state.password,
       this.state.repeatedPassword,
+      this.state.error,
       this.setState({ shouldRedirect: true })
     );
   };
@@ -75,12 +76,8 @@ class SignUp extends React.Component {
       passwordFocused,
       repeatedPasswordFocused,
       emailFocused,
-      shouldRedirect,
     } = this.state;
 
-    // if (shouldRedirect) {
-    //   return <Navigate to="/login" />;
-    // }
     return (
       <>
         <div className="signUp">
@@ -90,6 +87,7 @@ class SignUp extends React.Component {
                 <div className="signUpContainer">
                   <li className="signUpItem">
                     <div className="containerFormRegister">
+                      <span className="error">{this.props.error}</span>
                       <form onSubmit={this.onSubmitRegister}>
                         <div className="personalData">
                           <input

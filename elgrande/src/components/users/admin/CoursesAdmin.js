@@ -115,7 +115,7 @@ function CoursesAdmin() {
       .catch((error) => {
         console.error("Error during add new course:", error);
 
-        setError(error.response.data.errors[0].defaultMessage);
+        setError(error.response.data.info);
         console.log(error);
       });
   };
@@ -198,7 +198,10 @@ function CoursesAdmin() {
                       </div>
 
                       <div className="buttonContainerLogin">
-                        <button type="submit" className="btn--outline--accept">
+                        <button
+                          type="submit"
+                          className="btn--outline--accept-admin"
+                        >
                           ZAPISZ
                         </button>
                       </div>

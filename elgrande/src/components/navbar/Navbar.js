@@ -4,6 +4,8 @@ import { ButtonLogin } from "../button/ButtonLogin";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import ButtonLogout from "../button/ButtonLogout";
+import ButtonProfilAdmin from "../button/ButtonProfilAdmin";
+import ButtonProfilUser from "../button/ButtonProfilUser";
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -11,10 +13,12 @@ function Navbar() {
     loginButton: true,
     signButton: true,
     logoutButton: false,
+    profilButton: false,
   });
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
+  const getRole = localStorage.getItem("role");
 
   useEffect(() => {
     const authToken = localStorage.getItem("auth_token");
@@ -24,6 +28,7 @@ function Navbar() {
         loginButton: false,
         signButton: false,
         logoutButton: true,
+        profilButton: true,
       }));
     } else {
       setButton((prevState) => ({
@@ -31,6 +36,7 @@ function Navbar() {
         loginButton: true,
         signButton: true,
         logoutButton: false,
+        profilButton: false,
       }));
     }
   }, []);
@@ -40,10 +46,11 @@ function Navbar() {
       loginButton: true,
       signButton: true,
       logoutButton: false,
+      profilButton: false,
     });
     localStorage.removeItem("auth_token");
-
-    // window.location.href = "/";
+    localStorage.removeItem("name");
+    localStorage.removeItem("role");
   };
 
   return (
@@ -100,7 +107,13 @@ function Navbar() {
                 {button.signButton && <ButtonSignUp />}
               </span>
             </li>
-
+            <li className="activeButton">
+              <span onClick={closeMobileMenu} id="logoutButtonMain">
+                {getRole === "ADMIN"
+                  ? button.profilButton && <ButtonProfilAdmin />
+                  : button.profilButton && <ButtonProfilUser />}
+              </span>
+            </li>
             <li className="activeButton">
               <span onClick={handleClickLogoutButton} id="logoutButtonMain">
                 {button.logoutButton && <ButtonLogout />}

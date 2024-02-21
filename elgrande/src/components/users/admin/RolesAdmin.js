@@ -29,7 +29,7 @@ function RolesAdmin() {
   };
 
   const handleInputChange = (event) => {
-    const value = event.target.value;
+    const value = event.target.value.toUpperCase();
     setEditedRoleName(value);
   };
 
@@ -135,44 +135,40 @@ function RolesAdmin() {
             <div className="grid-c1-content">
               <span className="errorUpdate">{errorUpdate}</span>
               {roles.map((role) => (
-                <ul>
-                  <li className="roleLine" key={role.id}>
-                    {editRoleId === role.id ? (
-                      <textarea
-                        className="updatedText"
-                        type="text"
-                        value={editedRoleName}
-                        onChange={handleInputChange}
-                      />
-                    ) : (
-                      role.name
-                    )}
+                <li className="roleLine" key={role.id}>
+                  {editRoleId === role.id ? (
+                    <textarea
+                      className="updatedText"
+                      type="text"
+                      value={editedRoleName}
+                      onChange={handleInputChange}
+                    />
+                  ) : (
+                    role.name
+                  )}
 
-                    <span className="spanButtonsRole">
-                      {editRoleId === role.id ? (
-                        [
-                          <ButtonUpdate
-                            onClick={() => handleUpdateRole(role.id)}
-                          >
-                            Zapisz
-                          </ButtonUpdate>,
-                          <ButtonDelete onClick={() => handleCancel()}>
-                            Anuluj
-                          </ButtonDelete>,
-                        ]
-                      ) : (
-                        <>
-                          <ButtonUpdate
-                            onClick={() => handleEditClick(role.id, role.name)}
-                          />
-                          <ButtonDelete
-                            onClick={() => handleDeleteRole(role.id)}
-                          />
-                        </>
-                      )}
-                    </span>
-                  </li>
-                </ul>
+                  <span className="spanButtonsRole">
+                    {editRoleId === role.id ? (
+                      [
+                        <ButtonUpdate onClick={() => handleUpdateRole(role.id)}>
+                          Zapisz
+                        </ButtonUpdate>,
+                        <ButtonDelete onClick={() => handleCancel()}>
+                          Anuluj
+                        </ButtonDelete>,
+                      ]
+                    ) : (
+                      <>
+                        <ButtonUpdate
+                          onClick={() => handleEditClick(role.id, role.name)}
+                        />
+                        <ButtonDelete
+                          onClick={() => handleDeleteRole(role.id)}
+                        />
+                      </>
+                    )}
+                  </span>
+                </li>
               ))}
             </div>
           </div>
@@ -199,7 +195,10 @@ function RolesAdmin() {
                       </div>
 
                       <div className="buttonContainerLogin">
-                        <button type="submit" className="btn--outline--accept">
+                        <button
+                          type="submit"
+                          className="btn--outline--accept-admin"
+                        >
                           ZAPISZ
                         </button>
                       </div>

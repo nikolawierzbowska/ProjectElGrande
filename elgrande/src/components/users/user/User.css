@@ -1,0 +1,58 @@
+.sidebarNavLinkUser {
+    display: block;
+
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 3px 14px;
+    column-gap: 12px;
+    letter-spacing: 0.03em;
+    border: 1px solid transparent;
+    font-size: 15px;
+    transition: var(--trasition-default);
+    
+}
+
+.sidebarNavLinkUser:active{
+    color: rgb(212, 164, 231);
+}
+
+.sidebarNavLinkUser:hover{
+    border-bottom: 1px solid black; ;
+    background-color: rgb(80, 4, 143);
+    accent-color: black;
+    
+}
+.sidebarNavLinkTextUser{
+    color: rgb(193, 203, 212);
+   
+}
+
+/* .sidebarNavLinkTextUser{
+    display: none;
+} */
+
+.sidebarNavigationLessons{
+    margin-top: 5px;
+    height: 400px;
+    overflow-y: scroll;
+
+   
+  
+}
+.sidebarNavigationLessons::-webkit-scrollbar{
+    width: 5px;
+    
+
+}
+.sidebarNavigationLessons::-webkit-scrollbar-thumb{
+    background-color: rgb(80, 4, 143);
+    border-radius: 18px;
+    size: 70px;
+    
+}
+.sidebarNavigationLessons::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 18px;
+}

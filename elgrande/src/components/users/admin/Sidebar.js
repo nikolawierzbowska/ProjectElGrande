@@ -3,7 +3,6 @@ import "../../../App.css";
 import "./Sidebar.css";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUserPlus } from "@fortawesome/free-solid-svg-icons";
 import { faGear } from "@fortawesome/free-solid-svg-icons";
 import { faMessage } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
@@ -11,16 +10,21 @@ import { faLock } from "@fortawesome/free-solid-svg-icons";
 import { faTableColumns } from "@fortawesome/free-solid-svg-icons";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
 
-function Sidebar() {
+const Sidebar = () => {
+  const nameFromLocalStorage = window.localStorage.getItem("name");
+  const nameUser = "Cześć " + nameFromLocalStorage + " !";
+
   return (
     <>
       <div className="sidebarMain">
         <div className="sidebar">
           <div className="sidebarInfoUser">
-            <div className="sidebarInfoImage">
-              <FontAwesomeIcon icon={faUserPlus} />
+            <div className="contactContainerImageProfile">
+              <div className="imgContainerProfile">
+                <img src="./picture/login1.png" alt="opinion" />
+              </div>
             </div>
-            <div className="sidebarInfoName">cześć, name!</div>
+            <div className="sidebarInfoName">{nameUser}</div>
           </div>
           <nav className="sidebarNavigation">
             <ul className="sidebarNavList">
@@ -78,6 +82,5 @@ function Sidebar() {
       </div>
     </>
   );
-}
-
+};
 export default Sidebar;

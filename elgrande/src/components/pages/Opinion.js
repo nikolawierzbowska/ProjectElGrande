@@ -11,7 +11,7 @@ function Opinion() {
   useEffect(() => {
     request(
       "GET",
-      "http://localhost:8080/api/v1/courses/0b20d02b-42d9-4328-9254-e91421e356ac/opinions"
+      "http://localhost:8080/api/v1/courses/078dbf81-162c-48fd-8cfa-e04d53882fae/opinions"
     )
       .then((response) => {
         setOpinion(response.data);
@@ -44,7 +44,7 @@ function Opinion() {
                     </p>
                     <div className="opinionText">{opinion.description}</div>
 
-                    <div className="name">{opinion.user.firstName}</div>
+                    <div className="name">{opinion.userName}</div>
                   </li>
                 </div>
               ))}

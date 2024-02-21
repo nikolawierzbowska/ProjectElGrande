@@ -12,7 +12,6 @@ import MoreInfo from "../components/pages/MoreInfo";
 import Course from "../components/pages/Course";
 import NotFound from "../components/button/NotFound";
 import Payment from "../components/pages/Payment";
-import AuthContent from "../components/AuthContent";
 import ProfileAdmin from "./users/admin/ProfileAdmin";
 
 import CoursesAdmin from "./users/admin/CoursesAdmin";
@@ -20,16 +19,74 @@ import RolesAdmin from "./users/admin/RolesAdmin";
 import UsersAdmin from "./users/admin/UsersAdmin";
 import OpinionsAdmin from "./users/admin/OpinionsAdmin";
 import Settings from "./users/admin/Settings";
+import { fetchUserData } from "./users/admin/ReturnNameUser";
 
-import { request, setAuthToken } from "../axios_helper";
+import { request, setAuthToken, getAuthToken } from "../axios_helper";
+import ProfileUser from "./users/user/ProfileUser";
+import CourseUser from "./users/user/CourseUser";
+import LessonUser from "./users/user/LessonUser";
+import SettingsUser from "./users/user/SettingsUser";
+import Lesson1 from "./lessons/Lesson1";
+import Lesson2 from "./lessons/Lesson1";
+import Lesson3 from "./lessons/Lesson1";
 
+const listLessons = [
+  "Liczby i Potęgi",
+  "Logarytmy",
+  "Procenty",
+  "Równania",
+  "Nierówności",
+  "Funkcja liniowa",
+  "Funkcja kwadratowa",
+  "Funkcja wymierna",
+  "Funkcja wykładnicza",
+  "Funkcja logarytmiczna",
+  "Wyrażenia algebraiczne",
+  "Wielomiany",
+  "Ciągi",
+  "Trygonometria",
+  "Geometria anlityczna",
+  "Planimetria",
+  "Stereometria",
+  "Statystyka",
+  "Prawdopodobieństwo",
+  "Arkusze maturalne",
+];
+
+const LessonComponents = [<Lesson1 />, <Lesson2 />, <Lesson3 />];
 class AppContent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       userEmail: "",
+      error: "",
+      isLoggedIn: false,
+      role: "",
     };
-    this.errorRef = React.createRef();
+  }
+
+  checkRoleUser = () => {
+    const roleUser = localStorage.getItem("role");
+    if (roleUser === "ADMIN") {
+      this.setState({ role: "ADMIN" });
+    } else if (roleUser === "USER") {
+      this.setState({ role: "USER" });
+    }
+  };
+
+  checkLoginStatus = () => {
+    const loggedIn = getAuthToken();
+
+    if (loggedIn !== null && loggedIn !== "null") {
+      this.setState({ isLoggedIn: true });
+    } else {
+      this.setState({ isLoggedIn: false });
+    }
+  };
+
+  componentDidMount() {
+    this.checkLoginStatus();
+    this.checkRoleUser();
   }
 
   onLogin = (e, email, password) => {
@@ -40,15 +97,15 @@ class AppContent extends React.Component {
     })
       .then((response) => {
         if (response.status === 200) {
+          console.log(response.data);
           setAuthToken(response.data.token);
 
-          this.setState({ userEmail: email });
+          this.setState({ userEmail: email }, () => {
+            console.log("userEmail in state:", this.state.userEmail);
 
-          if (email === "nikola@gmail.com") {
-            window.location.href = "/admin-profile";
-          } else {
-            window.location.href = "/";
-          }
+            console.log(email);
+          });
+          fetchUserData(email);
 
           document.getElementById("email").value = "";
           document.getElementById("password").value = "";
@@ -77,29 +134,29 @@ class AppContent extends React.Component {
       repeatedPassword: repeatedPassword,
     })
       .then((response) => {
-        setAuthToken(response.data.token);
         document.getElementById("firstName").value = "";
         document.getElementById("lastName").value = "";
         document.getElementById("email").value = "";
         document.getElementById("password").value = "";
         document.getElementById("repeatedPassword").value = "";
         document.getElementById("signButtonMain").style.display = "none";
+        document.getElementsByClassName("error")[0].textContent = "";
       })
       .catch((error) => {
         console.log(error);
+        this.setState({ error: error.response.data.info });
       });
   };
 
   render() {
+    const { error, isLoggedIn, role } = this.state;
     return (
       <>
-        <AuthContent />
         <Router>
           <Navbar />
 
           <Routes>
             <Route path="/" element={<Home />} />
-
             <Route path="/opinion" element={<Opinion />} />
             <Route path="/price" element={<Price />} />
             <Route path="/contact" element={<Contact />} />
@@ -110,26 +167,90 @@ class AppContent extends React.Component {
                   onLogin={(e, email, password) =>
                     this.onLogin(e, email, password)
                   }
+                  setUserEmail={this.setUserEmail}
                 />
               }
             />
             <Route
               path="/sign-up"
-              element={<SignUp onRegister={this.onRegister} />}
+              element={<SignUp onRegister={this.onRegister} error={error} />}
             />
-
             <Route path="/more-info" element={<MoreInfo />} />
             <Route path="/how-to-sign-up" element={<Course />} />
             <Route path="/payment" element={<Payment />} />
-
-            <Route path="/admin-profile" element={<ProfileAdmin />} />
-            <Route path="/admin-courses" element={<CoursesAdmin />} />
-            <Route path="/admin-roles" element={<RolesAdmin />} />
-            <Route path="/admin-users" element={<UsersAdmin />} />
-            <Route path="/admin-opinions" element={<OpinionsAdmin />} />
-            <Route path="/admin-settings" element={<Settings />} />
-
-            {/* <Route path="/user-page" element={<UserPage />} /> */}
+            <Route
+              path="/admin-profile"
+              element={
+                isLoggedIn && role === "ADMIN" ? <ProfileAdmin /> : <Login />
+              }
+            />
+            <Route
+              path="/admin-courses"
+              element={
+                isLoggedIn && role === "ADMIN" ? <CoursesAdmin /> : <Login />
+              }
+            />
+            <Route
+              path="/admin-roles"
+              element={
+                isLoggedIn && role === "ADMIN" ? <RolesAdmin /> : <Login />
+              }
+            />
+            <Route
+              path="/admin-users"
+              element={
+                isLoggedIn && role === "ADMIN" ? <UsersAdmin /> : <Login />
+              }
+            />
+            <Route
+              path="/admin-opinions"
+              element={
+                isLoggedIn && role === "ADMIN" ? <OpinionsAdmin /> : <Login />
+              }
+            />
+            <Route
+              path="/admin-settings"
+              element={
+                isLoggedIn && role === "ADMIN" ? <Settings /> : <Login />
+              }
+            />
+            <Route
+              path="/user-profile"
+              element={
+                isLoggedIn && role === "USER" ? <ProfileUser /> : <Login />
+              }
+            />
+            {/* <Route
+              path="/user-course"
+              element={
+                isLoggedIn && role === "USER" ? <CourseUser /> : <Login />
+              } */}
+            {/* /> */}
+            <Route
+              path="/user-lessons"
+              element={
+                isLoggedIn && role === "USER" ? <LessonUser /> : <Login />
+              }
+            />
+            <Route
+              path="/user-settings"
+              element={
+                isLoggedIn && role === "USER" ? <SettingsUser /> : <Login />
+              }
+            />
+            {listLessons.map((lesson, index) => (
+              <Route
+                key={index}
+                path={`/user-lesson-${index + 1}`}
+                element={
+                  isLoggedIn && role === "USER" ? (
+                    LessonComponents[index]
+                  ) : (
+                    <Login />
+                  )
+                }
+              />
+            ))}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Router>
