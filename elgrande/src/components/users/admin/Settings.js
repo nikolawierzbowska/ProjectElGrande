@@ -7,6 +7,15 @@ function Settings() {
   return (
     <>
       <Sidebar />
+      <style>
+        {`
+        #settingsAdminId{
+          border: 1px solid black; 
+          background-color:#d33175;
+          accent-color: black;
+        }      
+          `}
+      </style>
     </>
   );
 }

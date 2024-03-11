@@ -17,7 +17,7 @@
  
 }
 
-.btn--outline-logout, .btn--outline-panel {
+  .btn--outline-logout, .btn--outline-panel  {
   background-color:#e77a99;
   font-size: 1.1rem;
   font-weight: bold;
@@ -26,7 +26,7 @@
   margin-right: 15px;
   border-radius: 10px;
 }
-.btn--outline-panel{
+  .btn--outline-panel {
   background-color:#7169D4;
 }
 
@@ -47,7 +47,7 @@
   transition: 250ms;
 }
 
-.btn--outline--color {
+.btn--outline--color{
   height: 44px;
   letter-spacing: 1px;
   background-color: rgb(231, 122, 153);
@@ -86,7 +86,7 @@
   background-color:#7169D4;
 }
 
-.btn--outline-update, .btn--outline-delete{
+.btn--outline-update, .btn--outline-delete, .btn--outline-accept{
   width: 55px;
   height: 25px;
   text-align: center;
@@ -106,12 +106,17 @@
   justify-content: center;
 }
 
+.btn--outline-accept {
+  width: 100px;
+  height: 25px;
+}
+
 .btn--outline-delete{
   background-color: #d33175;;
 }
 
 .btn--outline--buy:hover, .btn--outline--accept:hover, .btn--outline--save:hover,
-.btn--outline-update:hover, .btn--outline-delete:hover {
+.btn--outline-update:hover, .btn--outline-delete:hover, .btn--outline-accept:hover {
   background: #e77a99;
   border-color: #7169D4;
 }

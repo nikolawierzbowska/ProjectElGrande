@@ -12,15 +12,15 @@ import MoreInfo from "../components/pages/MoreInfo";
 import Course from "../components/pages/Course";
 import NotFound from "../components/button/NotFound";
 import Payment from "../components/pages/Payment";
-import ProfileAdmin from "./users/admin/ProfileAdmin";
+// import ProfileAdmin from "./users/admin/ProfileAdmin";
 
 import CoursesAdmin from "./users/admin/CoursesAdmin";
 import RolesAdmin from "./users/admin/RolesAdmin";
 import UsersAdmin from "./users/admin/UsersAdmin";
 import OpinionsAdmin from "./users/admin/OpinionsAdmin";
 import Settings from "./users/admin/Settings";
+import ProfileAdmin from "./users/admin/ProfileAdmin";
 import { fetchUserData } from "./users/admin/ReturnNameUser";
-
 import { request, setAuthToken, getAuthToken } from "../axios_helper";
 import ProfileUser from "./users/user/ProfileUser";
 import CourseUser from "./users/user/CourseUser";
@@ -100,16 +100,19 @@ class AppContent extends React.Component {
           console.log(response.data);
           setAuthToken(response.data.token);
 
-          this.setState({ userEmail: email }, () => {
-            console.log("userEmail in state:", this.state.userEmail);
+          this.setState({ userEmail: email });
+          window.localStorage.setItem("email", email);
 
-            console.log(email);
-          });
           fetchUserData(email);
 
           document.getElementById("email").value = "";
           document.getElementById("password").value = "";
           document.getElementsByClassName("error")[0].textContent = "";
+          if (window.localStorage.getItem("email") === "nikola@gmail.com") {
+            window.location.href = "/admin-profile";
+          } else {
+            window.location.href = "/user-profile";
+          }
         }
       })
       .catch((error) => {
@@ -150,6 +153,7 @@ class AppContent extends React.Component {
 
   render() {
     const { error, isLoggedIn, role } = this.state;
+
     return (
       <>
         <Router>
@@ -167,7 +171,6 @@ class AppContent extends React.Component {
                   onLogin={(e, email, password) =>
                     this.onLogin(e, email, password)
                   }
-                  setUserEmail={this.setUserEmail}
                 />
               }
             />

@@ -2,8 +2,8 @@ import React from "react";
 import "./Button.css";
 import { Link } from "react-router-dom";
 
-const STYLES = ["btn--outline"];
-const NAME = ["ZATWIERDŹ"];
+const STYLES = ["btn--outline-accept"];
+const NAME = ["DODAJ OPINIE"];
 
 export const ButtonAccept = ({ children, onClick, buttonStyle }) => {
   const checkButtonStyle = buttonStyle || STYLES[0];

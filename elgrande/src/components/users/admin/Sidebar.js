@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../../../App.css";
 import "./Sidebar.css";
 import { Link } from "react-router-dom";
@@ -9,10 +9,17 @@ import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faLock } from "@fortawesome/free-solid-svg-icons";
 import { faTableColumns } from "@fortawesome/free-solid-svg-icons";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
+import { fetchUserData } from "../admin/ReturnNameUser";
 
 const Sidebar = () => {
-  const nameFromLocalStorage = window.localStorage.getItem("name");
-  const nameUser = "Cześć " + nameFromLocalStorage + " !";
+  const [userData, setUserData] = useState(null);
+
+  useEffect(() => {
+    const email = localStorage.getItem("email");
+    if (email) {
+      fetchUserData(email).then((userData) => setUserData(userData));
+    }
+  }, []);
 
   return (
     <>
@@ -24,12 +31,18 @@ const Sidebar = () => {
                 <img src="./picture/login1.png" alt="opinion" />
               </div>
             </div>
-            <div className="sidebarInfoName">{nameUser}</div>
+            <div className="sidebarInfoName">
+              Cześć {userData ? userData.firstName : ""}
+            </div>
           </div>
           <nav className="sidebarNavigation">
             <ul className="sidebarNavList">
               <li className="sidebarNavItem">
-                <Link to="/admin-profile" className="sidebarNavLink">
+                <Link
+                  to="/admin-profile"
+                  className="sidebarNavLink"
+                  id="profileAdminId"
+                >
                   <span>
                     <FontAwesomeIcon icon={faHouse} />
                   </span>
@@ -37,7 +50,11 @@ const Sidebar = () => {
                 </Link>
               </li>
               <li className="sidebarNavItem">
-                <Link to="/admin-courses" className="sidebarNavLink">
+                <Link
+                  to="/admin-courses"
+                  className="sidebarNavLink"
+                  id="coursesAdminId"
+                >
                   <span>
                     <FontAwesomeIcon icon={faTableColumns} />
                   </span>
@@ -45,7 +62,11 @@ const Sidebar = () => {
                 </Link>
               </li>
               <li className="sidebarNavItem">
-                <Link to="/admin-roles" className="sidebarNavLink">
+                <Link
+                  to="/admin-roles"
+                  className="sidebarNavLink"
+                  id="rolesAdminId"
+                >
                   <span>
                     <FontAwesomeIcon icon={faLock} />
                   </span>
@@ -53,7 +74,11 @@ const Sidebar = () => {
                 </Link>
               </li>
               <li className="sidebarNavItem">
-                <Link to="/admin-users" className="sidebarNavLink">
+                <Link
+                  to="/admin-users"
+                  className="sidebarNavLink"
+                  id="usersAdminId"
+                >
                   <span>
                     <FontAwesomeIcon icon={faUser} />
                   </span>
@@ -61,7 +86,11 @@ const Sidebar = () => {
                 </Link>
               </li>
               <li className="sidebarNavItem">
-                <Link to="/admin-opinions" className="sidebarNavLink">
+                <Link
+                  to="/admin-opinions"
+                  className="sidebarNavLink"
+                  id="opinionsAdminId"
+                >
                   <span>
                     <FontAwesomeIcon icon={faMessage} />
                   </span>
@@ -69,7 +98,11 @@ const Sidebar = () => {
                 </Link>
               </li>
               <li className="sidebarNavItem">
-                <Link to="/admin-settings" className="sidebarNavLink">
+                <Link
+                  to="/admin-settings"
+                  className="sidebarNavLink"
+                  id="settingsAdminId"
+                >
                   <span>
                     <FontAwesomeIcon icon={faGear} />
                   </span>

@@ -115,7 +115,18 @@ function UsersAdmin() {
   return (
     <>
       <Sidebar />
+      <style>
+        {`
+        #usersAdminId{
+          border: 1px solid black; 
+          background-color:#d33175;
+          accent-color: black;
+        }      
+          `}
+      </style>
       <div className="main-content-holder">
+        <h1 className="titleAdmin"> LISTA UŻYKOWNIKÓW</h1>
+
         <div className="content-grid-three">
           {users.map((user) => (
             <div className="grid-one-item grid-common grid-c1" key={user.id}>

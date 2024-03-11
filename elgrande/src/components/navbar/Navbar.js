@@ -49,8 +49,9 @@ function Navbar() {
       profilButton: false,
     });
     localStorage.removeItem("auth_token");
-    localStorage.removeItem("name");
+
     localStorage.removeItem("role");
+    localStorage.removeItem("email");
   };
 
   return (

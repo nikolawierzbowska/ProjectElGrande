@@ -126,7 +126,17 @@ function RolesAdmin() {
   return (
     <>
       <Sidebar />
+      <style>
+        {`
+        #rolesAdminId{
+          border: 1px solid black; 
+          background-color:#d33175;
+          accent-color: black;
+        }      
+          `}
+      </style>
       <div className="main-content-holder">
+        <h1 className="titleAdmin"> ROLE</h1>
         <div className="content-grid-one">
           <div className="grid-one-item grid-common grid-c1">
             <div className="grid-c-title">
@@ -173,39 +183,36 @@ function RolesAdmin() {
             </div>
           </div>
 
-          <div className="grid-one-item grid-common grid-c1">
-            <div className="grid-c-title">
-              <h3 className="grid-c-title-text">Stwórz nową role: </h3>
-            </div>
-            <div className="grid-c1-content">
-              <div className="loginItemContainer">
-                <li className="loginItem">
-                  <div className="containerFormLogin">
-                    <span className="error">{error}</span>
-                    <form onSubmit={handleAddNewRole}>
-                      <div className="personalDataLogin">
-                        <input
-                          type="text"
-                          id="newRole"
-                          name="name"
-                          placeholder="nazwa roli"
-                          onChange={onChangeHandler}
-                          required
-                        ></input>
-                      </div>
+          <div className="inputNewObject">
+            <h3 className="text">Stwórz nową role: </h3>
 
-                      <div className="buttonContainerLogin">
-                        <button
-                          type="submit"
-                          className="btn--outline--accept-admin"
-                        >
-                          ZAPISZ
-                        </button>
-                      </div>
-                    </form>
-                  </div>
-                </li>
-              </div>
+            <div className="addItemContainer">
+              <li className="loginItem">
+                <div className="containerFormLogin">
+                  <span className="error">{error}</span>
+                  <form onSubmit={handleAddNewRole}>
+                    <div className="personalDataLogin">
+                      <input
+                        type="text"
+                        id="newRole"
+                        name="name"
+                        placeholder="nazwa roli"
+                        onChange={onChangeHandler}
+                        required
+                      ></input>
+                    </div>
+
+                    <div className="buttonContainerLogin">
+                      <button
+                        type="submit"
+                        className="btn--outline--accept-admin"
+                      >
+                        ZAPISZ
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </li>
             </div>
           </div>
         </div>

@@ -9,19 +9,17 @@
 .sidebar{
     background-color:#7169D4;
     width: 230px;
-    padding: 60px 10px 30px;
+    padding: 10px 10px 30px;
     transition: var(--trasition-default);
     height:100%;
-    
-   
+    position: fixed;   
 }
 
 .contactContainerImageProfile img{
     display: block;
-    height: 150px;
+    height: 100px;
 
 }
-
 
 
 path::after {
@@ -61,7 +59,7 @@ path::after {
 
 
 .sidebarNavigation{
-    margin-top: 20px;
+    margin-top: 10px;
     height: 300px;
     overflow-y: scroll;
   
@@ -93,16 +91,15 @@ path::after {
 }
 .sidebarNavLink{
     display: block;
-    height: 44px;
+    height: 40px;
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 6px 14px;
-    column-gap: 12px;
+    padding: 2px 14px;
+    column-gap: 10px;
     letter-spacing: 0.03em;
     border: 1px solid transparent;
-    /* color: aliceblue; */
     transition: var(--trasition-default);
 }
 
@@ -113,47 +110,65 @@ path::after {
     
 }
 
-
-
 .sidebarNavLinkText{
     color: rgb(193, 203, 212);
     padding-left: 10px;
 }
 
 
-@media  screen and (min-width: 1500px) {
-    .sidebar{
-        height: 100vh;
-    }
-}
-
-
-@media  screen and (max-width: 1400px) {
-    .sidebar{
-        padding: 70px 10px 10px;
-    }
-}
-
 @media  screen and (max-width: 1300px) {
+    .sidebarNavigation  {
+        height: 250px;
+    }
     .sidebar{
-        padding: 120px 16px 10px;
+        padding: 80px 16px 10px;
     }
 }
+
+
+
+@media  screen and (max-width: 1250px) {
+    .sidebar{
+        padding: 80px 16px 10px;
+    }
+}
+
+@media  screen and (max-width: 1100px) {
+    .sidebar{
+        padding: 70px 16px 10px;
+    }
+    .sidebarNavigation  {
+        height: 200px;
+    }
+}
+
+@media  screen and (max-width: 1000px) {
+    .sidebar{
+        padding: 60px 16px 10px;
+    }
+    .sidebarNavigation  {
+        height: 150px;
+        margin-top: 0;
+    }
+}
+
+
 
 
 @media  screen and (max-width: 800px) {
     .sidebar{
         padding: 50px 0 10px 0;
-    
+
         width: 72px;
-     
+        height:100%;
+        position:fixed;
     }
 
     .contactContainerImageProfile img{
         display: flex;
         height: 50px;
-    
     }
+
     .fa-user-plus  {
         width: 30px;
         height: 30px;
@@ -173,19 +188,107 @@ path::after {
     .sidebarNavItem{
         display: flex;
         justify-content: center;
-
     }
 
     .sidebarNavLink  {
-    padding: 2px 10px 2px 10px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+       
+        height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .sidebarNavLinkText{
         display: none;
     }
+    .sidebarNavigation  {
+        height: 180px;
+        margin-top: 0;
+    }
 }
 
+
+
+@media  screen and (max-width: 700px) {
+.sidebarNavigation  {
+    height: 150px;
+}
+
+}
+
+@media  screen and (max-width: 600px) {
+    .sidebar{
+        padding: 40px 0 10px 0;
+
+        width: 72px;
+        height:100%;
+        position:fixed;
+    }
+
+    .sidebarNavLink{
+        height: 20px;
+    }
+
+    .sidebarInfoName{
+        padding-bottom: 0;
+        padding-top: 4px;
+    }
+    .sidebarNavigation  {
+        height: 110px;
+    }
+}
+
+@media  screen and (max-width: 500px) {
+    .sidebar{
+        padding: 30px 0 10px 0;
+    }
+
+    .sidebarNavLink{
+        height: 18px;
+    }
+    .sidebarNavigation{
+        height: 80px;
+      
+    }
+}
+
+
+
+@media  screen and (max-width: 400px) {
+    .sidebarNavLink{
+        height: 17px;
+    }
+    .sidebarInfoName{
+        font-size: 9px;
+      
+    }
+
+
+    .sidebarNavigation{
+        height: 40px;
+
+    }
+}
+
+@media  screen and (max-width: 300px) {
+    .contactContainerImageProfile img{
+        height: 30px;
+    }
+    .sidebarInfoName{
+        padding-bottom:1px;
+        font-size: 6px;
+    }
+
+    .sidebarInfoUser{
+        padding: 0;
+    }
+    
+    
+
+    .sidebarNavigation{
+        height: 40px;
+
+    }
+}
+
+   

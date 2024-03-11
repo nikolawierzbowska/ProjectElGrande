@@ -8,6 +8,19 @@ function SettingsUser() {
   return (
     <>
       <SidebarUser />
+      <style>
+        {`
+        #settingsId{
+ 
+          border: 1px solid black; ;
+          background-color:#d33175;
+          accent-color: black;
+        }
+          
+
+      
+          `}
+      </style>
     </>
   );
 }

@@ -9,13 +9,14 @@
     column-gap: 12px;
     letter-spacing: 0.03em;
     border: 1px solid transparent;
-    font-size: 15px;
+    font-size: 13px;
     transition: var(--trasition-default);
     
 }
 
 .sidebarNavLinkUser:active{
     color: rgb(212, 164, 231);
+   
 }
 
 .sidebarNavLinkUser:hover{
@@ -28,31 +29,83 @@
     color: rgb(193, 203, 212);
    
 }
-
-/* .sidebarNavLinkTextUser{
-    display: none;
-} */
-
 .sidebarNavigationLessons{
-    margin-top: 5px;
-    height: 400px;
+    margin-top: 10px;
+    height: 200px;
     overflow-y: scroll;
-
-   
+    
   
 }
+
 .sidebarNavigationLessons::-webkit-scrollbar{
     width: 5px;
-    
+}
 
-}
 .sidebarNavigationLessons::-webkit-scrollbar-thumb{
-    background-color: rgb(80, 4, 143);
+    background-color: rgb(193, 203, 212);
     border-radius: 18px;
-    size: 70px;
+    size: 50px;
     
 }
+
+
 .sidebarNavigationLessons::-webkit-scrollbar-track{
     box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
     border-radius: 18px;
+}
+
+#caretDown, #caretUp{
+   margin-left: 50px;
+   display: none;
+}
+
+.textLesson{
+    padding: 20px;
+    margin: 3rem 5rem 1.5rem 15.5rem;
+    display: flex;
+    text-align: justify;
+    letter-spacing: 0.5px;
+    flex-direction: column;
+}
+
+.mathematicalCard{
+    padding: 5px;
+    font-weight: bold;
+}
+
+.firstPartLessons{
+    margin-bottom: 20px;
+}
+
+.learnSteps{
+    padding: 10px 0;
+
+}
+
+span.number{
+    font-weight: bold;
+    color: #551A8B;
+}
+
+.contactContainerImageGoal{
+  display: grid;
+  justify-items: end;
+  margin-top: -150px;
+}
+
+
+.nameOfLesson{
+    border-bottom: 1px solid black; 
+    background-color: rgb(80, 4, 143);
+    accent-color: black;
+    border-radius: 8px;
+    align-items: center;
+    padding: 3px 14px;
+    column-gap: 12px;
+    letter-spacing: 0.03em;
+    border: 1px solid transparent;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(212, 164, 231);
+    
 }

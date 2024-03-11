@@ -52,14 +52,26 @@ function OpinionAdmin() {
   return (
     <>
       <Sidebar />
+      <style>
+        {`
+        #opinionsAdminId{
+          border: 1px solid black; 
+          background-color:#d33175;
+          accent-color: black;
+        }      
+          `}
+      </style>
       <div className="main-content-holder">
+        <h1 className="titleAdmin"> OPINIE UŻYKOWNIKÓW</h1>
         <div className="content-grid-three">
           {opinions.map((opinion) => (
             <div className="grid-one-item grid-common grid-c1" key={opinion.id}>
               <div className="grid-c1-contentOpinion">
                 <li className="opinionLine">
                   <ul>
-                    <div className="opinionText">{opinion.description}</div>
+                    <div className="opinionTextAdmin">
+                      {opinion.description}
+                    </div>
 
                     <div className="userNameOpinion">{opinion.userName}</div>
                     <ButtonDelete

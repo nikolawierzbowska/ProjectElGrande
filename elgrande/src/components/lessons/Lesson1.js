@@ -7,19 +7,28 @@ import "./../users/admin/Sidebar.css";
 function Lesson1() {
   return (
     <>
-      <SidebarUser />
+      <SidebarUser click={true} />
+      <style>
+        {`
+        #lessonsId{
+          border: 1px solid black; 
+          background-color:#d33175;
+          accent-color: black;
+
+          #caretDown, #caretUp{
+            display: block
+        }
+        
+    
+
+      
+              
+          `}
+      </style>
 
       <div className="main-content-holder">
-        <div className="content-grid-three">
-          <div className="grid-one-item grid-common grid-c1">
-            {/* <div className="grid-c-title">
-                <h3 className="grid-c-title-text">Lista użytkowników:</h3>
-              </div> */}
-            <div className="grid-c1-content">
-              <li className="userLine"></li>
-            </div>
-          </div>
-        </div>
+        <h1 className="titleAdmin"> LEKCJA 1 - LICZBY I POTĘGI</h1>
+        <div className="content-grid-three"></div>
       </div>
     </>
   );

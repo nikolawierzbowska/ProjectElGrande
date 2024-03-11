@@ -123,7 +123,17 @@ function CoursesAdmin() {
   return (
     <>
       <Sidebar />
+      <style>
+        {`
+        #coursesAdminId{
+          border: 1px solid black; 
+          background-color:#d33175;
+          accent-color: black;
+        }      
+          `}
+      </style>
       <div className="main-content-holder">
+        <h1 className="titleAdmin"> KURSY</h1>
         <div className="content-grid-one">
           <div className="grid-one-item grid-common grid-c1">
             <div className="grid-c-title">
@@ -176,39 +186,36 @@ function CoursesAdmin() {
             </div>
           </div>
 
-          <div className="grid-one-item grid-common grid-c1">
-            <div className="grid-c-title">
-              <h3 className="grid-c-title-text">Dodaj nowy kurs: </h3>
-            </div>
-            <div className="grid-c1-content">
-              <div className="loginItemContainer">
-                <li className="loginItem">
-                  <div className="containerFormLogin">
-                    <span className="error">{error}</span>
-                    <form onSubmit={handleAddNewCourse}>
-                      <div className="personalDataLogin">
-                        <input
-                          type="text"
-                          id="newCourse"
-                          name="name"
-                          placeholder="nazwa kursu"
-                          onChange={onChangeHandler}
-                          required
-                        ></input>
-                      </div>
+          <div className="inputNewObject">
+            <h3 className="text">Dodaj nowy kurs: </h3>
 
-                      <div className="buttonContainerLogin">
-                        <button
-                          type="submit"
-                          className="btn--outline--accept-admin"
-                        >
-                          ZAPISZ
-                        </button>
-                      </div>
-                    </form>
-                  </div>
-                </li>
-              </div>
+            <div className="addItemContainer">
+              <li className="loginItem">
+                <div className="containerFormLogin">
+                  <span className="error">{error}</span>
+                  <form onSubmit={handleAddNewCourse}>
+                    <div className="personalDataLogin">
+                      <input
+                        type="text"
+                        id="newCourse"
+                        name="name"
+                        placeholder="nazwa kursu"
+                        onChange={onChangeHandler}
+                        required
+                      ></input>
+                    </div>
+
+                    <div className="buttonContainerLogin">
+                      <button
+                        type="submit"
+                        className="btn--outline--accept-admin"
+                      >
+                        ZAPISZ
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </li>
             </div>
           </div>
         </div>
