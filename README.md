@@ -9,8 +9,18 @@ The frontend of this project is developed using the following technologies:<br>
 - CSS: Styling language used for designing the user interface.<br>
 
 
-Screens of application:
+Some screens of application:
 1. Main page:
    ![image](https://github.com/nikolawierzbowska/ProjectElGrande/assets/128071406/1bae1cc0-73e3-48fd-87b8-e8f34c7055c5)
+   
+2. Register page:
+   ![image](https://github.com/nikolawierzbowska/ProjectElGrande/assets/128071406/634f9ea8-e937-4286-95a9-70696ee2fe60)
+
+3. Login page:
+   ![image](https://github.com/nikolawierzbowska/ProjectElGrande/assets/128071406/a76f36c4-0018-4112-a9eb-40e54236e3ed)
+
+4. Contact page:
+   ![image](https://github.com/nikolawierzbowska/ProjectElGrande/assets/128071406/9180c061-e322-4c8f-8296-49fdf182f33c)
+ 
 
 
