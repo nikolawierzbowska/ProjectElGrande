@@ -66,13 +66,14 @@ path::after {
 }
 .sidebarNavigation::-webkit-scrollbar{
     width: 5px;
-    
+    display: none;
 
 }
 .sidebarNavigation::-webkit-scrollbar-thumb{
     background-color: rgb(193, 203, 212);
     border-radius: 18px;
     size: 50px;
+    
     
 }
 .sidebarNavigation::-webkit-scrollbar-track{
@@ -122,6 +123,11 @@ path::after {
     }
     .sidebar{
         padding: 80px 16px 10px;
+    }
+    .sidebarNavigation::-webkit-scrollbar{
+        width: 5px;
+        display: block;
+    
     }
 }
 

@@ -23,37 +23,39 @@ import ProfileAdmin from "./users/admin/ProfileAdmin";
 import { fetchUserData } from "./users/admin/ReturnNameUser";
 import { request, setAuthToken, getAuthToken } from "../axios_helper";
 import ProfileUser from "./users/user/ProfileUser";
-import CourseUser from "./users/user/CourseUser";
 import LessonUser from "./users/user/LessonUser";
 import SettingsUser from "./users/user/SettingsUser";
 import Lesson1 from "./lessons/Lesson1";
-import Lesson2 from "./lessons/Lesson1";
-import Lesson3 from "./lessons/Lesson1";
+import Lesson2 from "./lessons/Lesson2";
+import Lesson3 from "./lessons/Lesson3";
+import Lesson4 from "./lessons/Lesson4";
+import Lesson5 from "./lessons/Lesson5";
+import Lesson6 from "./lessons/Lesson6";
+import Lesson7 from "./lessons/Lesson7";
+import Lesson8 from "./lessons/Lesson8";
+import Lesson9 from "./lessons/Lesson9";
+import Lesson10 from "./lessons/Lesson10";
+import Lesson11 from "./lessons/Lesson11";
+import Lesson12 from "./lessons/Lesson12";
+import Lesson13 from "./lessons/Lesson13";
+import Lesson14 from "./lessons/Lesson14";
+import Lesson15 from "./lessons/Lesson15";
+import Lesson16 from "./lessons/Lesson16";
+import Lesson17 from "./lessons/Lesson17";
+import Lesson18 from "./lessons/Lesson18";
+import Lesson19 from "./lessons/Lesson19";
+import Lesson20 from "./lessons/Lesson20";
+import Lesson21 from "./lessons/Lesson21";
+import Lesson22 from "./lessons/Lesson22";
+import Lesson23 from "./lessons/Lesson23";
+import Lesson24 from "./lessons/Lesson24";
+import Lesson25 from "./lessons/Lesson25";
+import Lesson26 from "./lessons/Lesson26";
+import Lesson27 from "./lessons/Lesson27";
+import Lesson28 from "./lessons/Lesson28";
+import Lesson29 from "./lessons/Lesson29";
+import Lesson30 from "./lessons/Lesson30";
 
-const listLessons = [
-  "Liczby i Potęgi",
-  "Logarytmy",
-  "Procenty",
-  "Równania",
-  "Nierówności",
-  "Funkcja liniowa",
-  "Funkcja kwadratowa",
-  "Funkcja wymierna",
-  "Funkcja wykładnicza",
-  "Funkcja logarytmiczna",
-  "Wyrażenia algebraiczne",
-  "Wielomiany",
-  "Ciągi",
-  "Trygonometria",
-  "Geometria anlityczna",
-  "Planimetria",
-  "Stereometria",
-  "Statystyka",
-  "Prawdopodobieństwo",
-  "Arkusze maturalne",
-];
-
-const LessonComponents = [<Lesson1 />, <Lesson2 />, <Lesson3 />];
 class AppContent extends React.Component {
   constructor(props) {
     super(props);
@@ -223,37 +225,147 @@ class AppContent extends React.Component {
                 isLoggedIn && role === "USER" ? <ProfileUser /> : <Login />
               }
             />
-            {/* <Route
-              path="/user-course"
-              element={
-                isLoggedIn && role === "USER" ? <CourseUser /> : <Login />
-              } */}
-            {/* /> */}
+
             <Route
               path="/user-lessons"
               element={
                 isLoggedIn && role === "USER" ? <LessonUser /> : <Login />
               }
             />
+
+            <Route
+              path="/user-lesson-1"
+              element={isLoggedIn && role === "USER" ? <Lesson1 /> : <Login />}
+            />
+            <Route
+              path="/user-lesson-2"
+              element={isLoggedIn && role === "USER" ? <Lesson2 /> : <Login />}
+            />
+            <Route
+              path="/user-lesson-3"
+              element={isLoggedIn && role === "USER" ? <Lesson3 /> : <Login />}
+            />
+
+            <Route
+              path="/user-lesson-4"
+              element={isLoggedIn && role === "USER" ? <Lesson4 /> : <Login />}
+            />
+            <Route
+              path="/user-lesson-5"
+              element={isLoggedIn && role === "USER" ? <Lesson5 /> : <Login />}
+            />
+            <Route
+              path="/user-lesson-6"
+              element={isLoggedIn && role === "USER" ? <Lesson6 /> : <Login />}
+            />
+            <Route
+              path="/user-lesson-7"
+              element={isLoggedIn && role === "USER" ? <Lesson7 /> : <Login />}
+            />
+            <Route
+              path="/user-lesson-8"
+              element={isLoggedIn && role === "USER" ? <Lesson8 /> : <Login />}
+            />
+            <Route
+              path="/user-lesson-9"
+              element={isLoggedIn && role === "USER" ? <Lesson9 /> : <Login />}
+            />
+
+            <Route
+              path="/user-lesson-10"
+              element={isLoggedIn && role === "USER" ? <Lesson10 /> : <Login />}
+            />
+            <Route
+              path="/user-lesson-11"
+              element={isLoggedIn && role === "USER" ? <Lesson11 /> : <Login />}
+            />
+            <Route
+              path="/user-lesson-12"
+              element={isLoggedIn && role === "USER" ? <Lesson12 /> : <Login />}
+            />
+            <Route
+              path="/user-lesson-13"
+              element={isLoggedIn && role === "USER" ? <Lesson13 /> : <Login />}
+            />
+            <Route
+              path="/user-lesson-14"
+              element={isLoggedIn && role === "USER" ? <Lesson14 /> : <Login />}
+            />
+            <Route
+              path="/user-lesson-15"
+              element={isLoggedIn && role === "USER" ? <Lesson15 /> : <Login />}
+            />
+
+            <Route
+              path="/user-lesson-16"
+              element={isLoggedIn && role === "USER" ? <Lesson16 /> : <Login />}
+            />
+            <Route
+              path="/user-lesson-17"
+              element={isLoggedIn && role === "USER" ? <Lesson17 /> : <Login />}
+            />
+            <Route
+              path="/user-lesson-18"
+              element={isLoggedIn && role === "USER" ? <Lesson18 /> : <Login />}
+            />
+            <Route
+              path="/user-lesson-19"
+              element={isLoggedIn && role === "USER" ? <Lesson19 /> : <Login />}
+            />
+            <Route
+              path="/user-lesson-20"
+              element={isLoggedIn && role === "USER" ? <Lesson20 /> : <Login />}
+            />
+            <Route
+              path="/user-lesson-21"
+              element={isLoggedIn && role === "USER" ? <Lesson21 /> : <Login />}
+            />
+
+            <Route
+              path="/user-lesson-22"
+              element={isLoggedIn && role === "USER" ? <Lesson22 /> : <Login />}
+            />
+            <Route
+              path="/user-lesson-23"
+              element={isLoggedIn && role === "USER" ? <Lesson23 /> : <Login />}
+            />
+            <Route
+              path="/user-lesson-24"
+              element={isLoggedIn && role === "USER" ? <Lesson24 /> : <Login />}
+            />
+            <Route
+              path="/user-lesson-25"
+              element={isLoggedIn && role === "USER" ? <Lesson25 /> : <Login />}
+            />
+            <Route
+              path="/user-lesson-26"
+              element={isLoggedIn && role === "USER" ? <Lesson26 /> : <Login />}
+            />
+            <Route
+              path="/user-lesson-27"
+              element={isLoggedIn && role === "USER" ? <Lesson27 /> : <Login />}
+            />
+
+            <Route
+              path="/user-lesson-28"
+              element={isLoggedIn && role === "USER" ? <Lesson28 /> : <Login />}
+            />
+            <Route
+              path="/user-lesson-29"
+              element={isLoggedIn && role === "USER" ? <Lesson29 /> : <Login />}
+            />
+            <Route
+              path="/user-lesson-30"
+              element={isLoggedIn && role === "USER" ? <Lesson30 /> : <Login />}
+            />
+
             <Route
               path="/user-settings"
               element={
                 isLoggedIn && role === "USER" ? <SettingsUser /> : <Login />
               }
             />
-            {listLessons.map((lesson, index) => (
-              <Route
-                key={index}
-                path={`/user-lesson-${index + 1}`}
-                element={
-                  isLoggedIn && role === "USER" ? (
-                    LessonComponents[index]
-                  ) : (
-                    <Login />
-                  )
-                }
-              />
-            ))}
+
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Router>

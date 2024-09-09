@@ -73,7 +73,7 @@ function UsersAdmin() {
       });
   };
 
-  const handleUpdateUserRole = (id, roleId) => {
+  const handleUpdateUserRole = (roleId, id) => {
     request(
       "PATCH",
       `http://localhost:8080/api/v1/admin/roles/${roleId}/users/${id}`,

@@ -59,7 +59,11 @@ function Navbar() {
       <nav className="navbar">
         <div className="navbar-container">
           <Link to="/">
-            <img className="navbar-logo" src="logo.png" alt="logo MATAMA 5.0" />
+            <img
+              className="navbar-logo"
+              src="new_logo.jpg"
+              alt="logo MATAMA 5.0"
+            />
           </Link>
           <div className="menu-icon" onClick={handleClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars"} />

@@ -12,7 +12,7 @@ import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import { faCaretUp } from "@fortawesome/free-solid-svg-icons";
 
 const listLessons = [
-  "1. Liczby i Potęgi",
+  "1. Liczby i potęgi",
   "2. Logarytmy",
   "3. Procenty",
   "4. Równania",
@@ -45,6 +45,7 @@ const listLessons = [
 ];
 const SidebarUser = ({ click }) => {
   const [userData, setUserData] = useState(null);
+  const [isClicked, setIsClicked] = useState(click);
 
   useEffect(() => {
     const email = localStorage.getItem("email");
@@ -53,8 +54,6 @@ const SidebarUser = ({ click }) => {
     }
     setIsClicked(click);
   }, [click]);
-
-  const [isClicked, setIsClicked] = useState(click);
 
   const handleClick = () => setIsClicked(!isClicked);
 

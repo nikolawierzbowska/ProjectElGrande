@@ -36,7 +36,7 @@ function LessonUser() {
           jeśli ich jeszcze nie masz i wydrukuj (najlepiej dwustronnie). Staraj
           się rozwiązywać zadania wraz z ich użyciem. Regularna praca wraz z
           kartą wzorów zagwarantuje Ci, że w trakcie pisania egzaminu
-          maturalnego nie będziesz tracił czasu na ich odnajdywaniu.
+          maturalnego nie będziesz tracił czasu na ich odnajdywanie.
         </div>
         <br></br>
 
