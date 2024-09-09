@@ -29,8 +29,9 @@ Some screens of application:
    ![image](https://github.com/user-attachments/assets/cd25612a-4e22-45e6-9570-ae99ddab1b30)
 
 7. Contact page:
-   ![image](https://github.com/nikolawierzbowska/ProjectElGrande/assets/128071406/9180c061-e322-4c8f-8296-49fdf182f33c)
-   
+   ![image](https://github.com/user-attachments/assets/2806cc5a-3cdf-4037-8025-b6d73a840e34)
+
+
 ADMIN views: 
 9. Admin's profile
    ![image](https://github.com/user-attachments/assets/f69541c0-4451-4ccf-88f6-be40c63948cd)
@@ -46,6 +47,7 @@ ADMIN views:
 
 13. Opinions page:
     ![image](https://github.com/user-attachments/assets/01593326-4019-4474-ba23-1aa5540d1a4c)
+
 
 USER views:
 14. User's profile
