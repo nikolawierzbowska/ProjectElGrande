@@ -1,6 +1,11 @@
 import * as React from "react";
 import Navbar from "../components/navbar/Navbar";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useNavigate,
+} from "react-router-dom";
 import "../App.css";
 import Home from "../components/pages/Home";
 import Opinion from "../components/pages/Opinion";
@@ -89,6 +94,10 @@ class AppContent extends React.Component {
   componentDidMount() {
     this.checkLoginStatus();
     this.checkRoleUser();
+    const role = localStorage.getItem("role");
+    const isLoggedIn = !!getAuthToken();
+
+    this.setState({ isLoggedIn, role });
   }
 
   onLogin = (e, email, password) => {
@@ -104,12 +113,15 @@ class AppContent extends React.Component {
 
           this.setState({ userEmail: email });
           window.localStorage.setItem("email", email);
+          window.localStorage.setItem("role", response.data.role);
 
           fetchUserData(email);
 
           document.getElementById("email").value = "";
           document.getElementById("password").value = "";
           document.getElementsByClassName("error")[0].textContent = "";
+          this.setState({ isLoggedIn: true, role: response.data.role });
+
           if (window.localStorage.getItem("email") === "nikola@gmail.com") {
             window.location.href = "/admin-profile";
           } else {
