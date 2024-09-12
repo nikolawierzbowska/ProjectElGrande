@@ -2,6 +2,9 @@ import * as React from "react";
 import "../../App.css";
 import "./Login.css";
 import "../button/Button.css";
+import ForgotPassword from "./ForgotPassword";
+
+import { Link } from "react-router-dom";
 
 import { ButtonSignUp } from "../button/ButtonSignUp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -19,6 +22,7 @@ class Login extends React.Component {
       password: "",
       passwordVisible: false,
       onLogin: props.onLogin,
+      forgotPassword: false,
     };
   }
 
@@ -38,8 +42,18 @@ class Login extends React.Component {
     }));
   };
 
+  booleanForgotPassword = () => {
+    console.log("klik");
+
+    document.getElementsByClassName(
+      "loginContainerLogin2Input"
+    )[0].textContent = "";
+    this.setState({ forgotPassword: true });
+    console.log(this.forgotPassword);
+  };
+
   render() {
-    const { passwordVisible } = this.state;
+    const { passwordVisible, forgotPassword } = this.state;
 
     return (
       <>
@@ -52,7 +66,7 @@ class Login extends React.Component {
                     <img src="./picture/login.png" alt="login to web app" />
                   </li>
                 </div>
-                <div className="loginContainerLogin2">
+                <div className="loginContainerLogin2Input">
                   <h1 className="titleLogin">MIŁO CIĘ WIDZIEĆ!</h1>
                   <div className="loginItemContainer">
                     <li className="loginItem">
@@ -96,7 +110,6 @@ class Login extends React.Component {
                               )}
                             </div>
                           </div>
-                          <div className="forgetPssord">Zapomniałeś hasło?</div>
 
                           <div className="buttonContainerLogin">
                             <button
@@ -116,6 +129,13 @@ class Login extends React.Component {
                       </div>
                     </li>
                   </div>
+                </div>
+                <div
+                  className="forgetPassword"
+                  onClick={this.booleanForgotPassword}
+                >
+                  {forgotPassword ? <ForgotPassword /> : ""}
+                  <Link to="/password">Zapomniałeś hasło? </Link>
                 </div>
               </ul>
             </div>

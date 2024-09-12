@@ -11,6 +11,39 @@
     letter-spacing: 4px;
     margin-bottom: 15px;
 }
+.titleForgorPassword{
+    color:  #4803c9;;
+    font-size: 1.5rem;
+    text-align: center;
+  
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+.forgorPasswordText{
+    color:  #4803c9;;
+    font-size: 1rem;
+    text-align: center;
+  
+    font-weight: 400px;
+    margin-bottom: 30px;
+
+}
+.forgotPasswordContainer{
+    display: flex;
+    flex-flow: column;
+    align-items: stretch;
+    max-width: 1000px;
+   
+    margin: 0 auto;
+    background:  linear-gradient(90deg,rgba(255, 255, 255, 0.1), rgba(255,255,255,0.6));
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(1px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+}
 
 .loginContainer{
     display: flex;
@@ -97,15 +130,17 @@
     
 }
 
-div.forgetPssord{
+div.forgetPassword{
     font-size: 10px;
     font-weight: bold;
     text-align: right;
-    margin: -14px 12px 15px  0;
+    margin-right: -520px;
+    margin-top: 130px;
     color:  #4803c9;
+    position: fixed;
 }
 
-div.forgetPssord, div.iconLoginEye, button.btn.signUpLink:hover{
+div.forgetPassword, div.iconLoginEye, button.btn.signUpLink:hover{
 cursor: pointer;
 }
 
@@ -169,6 +204,33 @@ span.error{
     flex-direction: column;
     border-radius: 2px ;
     height: 400px;
+}
+.loginContainerLogin2Input{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color:transparent;
+    margin-left: 20px;
+    width: 350px;
+    align-items: stretch;
+    flex-direction: column;
+    border-radius: 2px ;
+    height: 400px;
+}
+
+
+.loginForgotPassword{
+    justify-content: center;
+    align-items: center;
+  
+    background-color:transparent;
+    margin-left: 20px;
+    width: 350px;
+    align-items: stretch;
+    flex-direction: column;
+    border-radius: 2px ;
+    height: 300px;
+
 }
 
 .loginItemLogin2> img{

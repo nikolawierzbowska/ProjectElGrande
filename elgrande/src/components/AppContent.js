@@ -1,11 +1,6 @@
 import * as React from "react";
 import Navbar from "../components/navbar/Navbar";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useNavigate,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "../App.css";
 import Home from "../components/pages/Home";
 import Opinion from "../components/pages/Opinion";
@@ -60,6 +55,7 @@ import Lesson27 from "./lessons/Lesson27";
 import Lesson28 from "./lessons/Lesson28";
 import Lesson29 from "./lessons/Lesson29";
 import Lesson30 from "./lessons/Lesson30";
+import ForgotPassword from "./pages/ForgotPassword";
 
 class AppContent extends React.Component {
   constructor(props) {
@@ -195,6 +191,7 @@ class AppContent extends React.Component {
             <Route path="/more-info" element={<MoreInfo />} />
             <Route path="/how-to-sign-up" element={<Course />} />
             <Route path="/payment" element={<Payment />} />
+            <Route path="/password" element={<ForgotPassword />} />
             <Route
               path="/admin-profile"
               element={
