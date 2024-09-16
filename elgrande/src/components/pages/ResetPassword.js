@@ -3,46 +3,46 @@ import "../../App.css";
 import "./Login.css";
 import "../button/Button.css";
 
-function ForgotPassword() {
+function ResetPassword() {
   const [error, setError] = useState("");
-  const [email, setEmail] = useState("");
+  const [otp, setOtp] = useState("");
+  const email = window.localStorage.getItem("email");
 
   const onChangeHandler = (event) => {
-    setEmail(event.target.value);
+    setOtp(event.target.value);
   };
 
-  const onSubmitEmail = (e) => {
+  const onSubmitSetOtp = (e) => {
     e.preventDefault();
-    onSubmitEmailToResetPassword(email);
+    onSubmitOtp(email, otp);
   };
 
-  const onSubmitEmailToResetPassword = (email) => {
-    fetch(`http://localhost:8080/api/v1/forgotPassword/verifyMail/${email}`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ email }),
-    })
+  const onSubmitOtp = (email, otp) => {
+    fetch(
+      `http://localhost:8080/api/v1/forgotPassword/verifyOtp/${otp}/${email}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ otp, email }),
+      }
+    )
       .then((response) => {
         if (response.status === 200) {
-          console.log("Email sent successfully");
+          console.log("Otp is correct");
 
-          setEmail("");
-          window.localStorage.setItem("email", email);
+          setOtp("");
           setError("");
 
-          document.getElementById("email").value = "";
           document.getElementsByClassName("error")[0].textContent = "";
-
-          window.location.href = "/checkOtp";
         } else {
-          throw new Error("Failed to send email");
+          throw new Error("Otp not correct");
         }
       })
       .catch((error) => {
-        console.error("Error during reset password:", error);
-        setError("Failed to send email. Please try again.");
+        console.error("Error during check otp:", error);
+        setOtp("Failed to send otp. Please try again.");
         console.log(error);
       });
   };
@@ -66,19 +66,19 @@ function ForgotPassword() {
                         Zapomniałeś hasło?
                       </h1>
                       <h3 className="forgorPasswordText">
-                        Podaj email i zresetuj hasło!
+                        Odczytaj OTP z email i zresetuj hasło!
                       </h3>
                       <div className="loginItemContainer">
                         <li className="loginItem">
                           <div className="containerFormLogin">
                             <span className="error">{error}</span>
-                            <form onSubmit={onSubmitEmail}>
+                            <form onSubmit={onSubmitSetOtp}>
                               <div className="personalDataLogin">
                                 <input
-                                  type="email"
-                                  id="email"
-                                  name="email"
-                                  placeholder="Email"
+                                  type="text"
+                                  id="otp"
+                                  name="otp"
+                                  placeholder="OTP"
                                   onChange={onChangeHandler}
                                   required
                                 ></input>
@@ -109,4 +109,4 @@ function ForgotPassword() {
   );
 }
 
-export default ForgotPassword;
+export default ResetPassword;

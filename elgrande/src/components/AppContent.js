@@ -56,6 +56,7 @@ import Lesson28 from "./lessons/Lesson28";
 import Lesson29 from "./lessons/Lesson29";
 import Lesson30 from "./lessons/Lesson30";
 import ForgotPassword from "./pages/ForgotPassword";
+import ResetPassword from "./pages/ResetPassword";
 
 class AppContent extends React.Component {
   constructor(props) {
@@ -191,7 +192,8 @@ class AppContent extends React.Component {
             <Route path="/more-info" element={<MoreInfo />} />
             <Route path="/how-to-sign-up" element={<Course />} />
             <Route path="/payment" element={<Payment />} />
-            <Route path="/password" element={<ForgotPassword />} />
+            <Route path="/forgotPassword" element={<ForgotPassword />} />
+            <Route path="/checkOtp" element={<ResetPassword />} />
             <Route
               path="/admin-profile"
               element={

@@ -44,12 +44,10 @@ class Login extends React.Component {
 
   booleanForgotPassword = () => {
     console.log("klik");
-
     document.getElementsByClassName(
       "loginContainerLogin2Input"
     )[0].textContent = "";
     this.setState({ forgotPassword: true });
-    console.log(this.forgotPassword);
   };
 
   render() {
@@ -135,7 +133,7 @@ class Login extends React.Component {
                   onClick={this.booleanForgotPassword}
                 >
                   {forgotPassword ? <ForgotPassword /> : ""}
-                  <Link to="/password">Zapomniałeś hasło? </Link>
+                  <Link to="/forgotPassword">Zapomniałeś hasło? </Link>
                 </div>
               </ul>
             </div>
