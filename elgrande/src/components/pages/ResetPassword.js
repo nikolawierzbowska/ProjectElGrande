@@ -36,6 +36,7 @@ function ResetPassword() {
           setError("");
 
           document.getElementsByClassName("error")[0].textContent = "";
+          window.location.href = "/setNewPassword";
         } else {
           throw new Error("Otp not correct");
         }

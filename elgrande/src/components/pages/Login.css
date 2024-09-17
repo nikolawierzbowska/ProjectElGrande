@@ -35,7 +35,7 @@
     flex-flow: column;
     align-items: stretch;
     max-width: 1000px;
-   
+
     margin: 0 50px 0 60px;
     background:  linear-gradient(90deg,rgba(255, 255, 255, 0.1), rgba(255,255,255,0.6));
     backdrop-filter: blur(15px);
@@ -127,7 +127,6 @@
     border-color: #4803c9;
     border-radius: 10px ;
     letter-spacing: none;
-    
 }
 
 div.forgetPassword{
@@ -139,9 +138,12 @@ div.forgetPassword{
     color:  #4803c9;
     position: fixed;
 }
+#newPasswordData{
+    margin-top: 20px;
+}
 
 div.forgetPassword, div.iconLoginEye, button.btn.signUpLink:hover{
-cursor: pointer;
+    cursor: pointer;
 }
 
 .iconLogin, .iconLoginEye{
@@ -159,7 +161,6 @@ div.iconLoginEye{
 
 div.iconLogin{
     display: flex;
-
     margin-left: 10px;
     margin-top: -21px;
     font-size: 12px;
@@ -169,10 +170,7 @@ span.error{
     color: red;
     font-weight: bold;
     font-size: 12px;
-  
 }
-
-
 
 .signUptext{
     color: black;
@@ -192,7 +190,6 @@ span.error{
     padding: 0;
 }
 
-    
 .loginContainerLogin2{
     justify-content: center;
     align-items: center;
@@ -205,6 +202,7 @@ span.error{
     border-radius: 2px ;
     height: 400px;
 }
+
 .loginContainerLogin2Input{
     justify-content: center;
     align-items: center;
@@ -218,11 +216,9 @@ span.error{
     height: 400px;
 }
 
-
 .loginForgotPassword{
     justify-content: center;
     align-items: center;
-  
     background-color:transparent;
     margin-left: 20px;
     width: 350px;
@@ -230,7 +226,6 @@ span.error{
     flex-direction: column;
     border-radius: 2px ;
     height: 300px;
-
 }
 
 .loginItemLogin2> img{
@@ -265,10 +260,21 @@ span.error{
     font-size: 1rem;
     justify-content: center;
 }
+#newPasswordSubmit{
+    margin-top: 20px;
+}
+#infoNewPassword{
+    margin-top: 14px;
+}
+
 
 @media screen and (max-width: 1300px) {
     .login{
         padding: 8rem 3rem 1rem 3rem;
+    }
+    div.forgetPassword{
+        color: #d33175;
+        margin: 130px 0 0 525px;         
     }
 }
 
@@ -277,40 +283,61 @@ span.error{
         padding: 7rem 3rem 1rem 3rem;
     } 
 
-    
+    div.forgetPassword{
+        color: #d33175;
+        margin: 130px 0 0 528px;         
+    }
+}
+
+@media screen and (max-width: 1100px){
+    div.forgetPassword{
+        color: #d33175;
+        margin: 130px 0 0 528px;         
+        } 
+}
+
+@media screen and (max-width: 1000px){
+    div.forgetPassword{
+        color: #d33175;
+        margin: 131px 0 0 528px;         
+        }
 }
 
 @media screen and (max-width: 800px) {
     .login{
         padding: 5rem 3rem 1rem 3rem;
     } 
-
     .loginContainer{
         margin:0;    
     }
     .loginItemContainer{
         margin-left: 20px;
     }
-   
+    div.forgetPassword{
+        color: #d33175;
+        margin: 528px 0 0 118px;         
+    }
 }
 
 @media screen and (max-width: 700px) {
     .login{
         padding: 5rem 3rem 1rem 3rem;
     } 
-
     .loginContainer{
         margin:0;    
     }
-
     .loginContainerLogin2{
         margin-top: 0;
         margin-left:0;
-        }
+    }
 
-        .loginItemContainer{
+    .loginItemContainer{
             margin-left: 40px;
-        }
+    }
+    div.forgetPassword{
+        color: #d33175;
+        margin: 527px 0 0 157px;         
+    }  
 }
 
 @media screen and (max-width: 500px) {
@@ -320,10 +347,25 @@ span.error{
     .loginContainer{
         width: 350px;
     }
+    div.forgetPassword{
+        color: #d33175;
+        margin: 527px 0 0 177px;  
+    }
 }
  
 @media screen and (max-width: 400px) {
     .login{
         padding: 2rem;
-    }  
+    }
+    div.forgetPassword{
+        color: #d33175;
+        margin: 527px 0 0 179px;
+    }
+}
+  
+@media screen and (max-width: 300px) {
+    div.forgetPassword{
+        color: #d33175;
+        margin: 527px 0 0 177px;
+    }
 }
